@@ -1,0 +1,58 @@
+name: SlashOps (direct)
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+
+jobs:
+  run:
+    if: ${{ contains(github.event.comment.body, '/') && (github.event.comment.author_association == 'OWNER' || github.event.comment.author_association == 'COLLABORATOR' || github.event.comment.author_association == 'MEMBER') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install tools
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ripgrep curl perl
+
+      - name: /replace  (find & replace text)
+        if: contains(github.event.comment.body, '/replace')
+        run: |
+          BODY="${{ github.event.comment.body }}"
+          OLD=$(echo "$BODY" | sed -n 's|.*\/replace *"\(.*\)" *"\(.*\)".*|\1|p')
+          NEW=$(echo "$BODY" | sed -n 's|.*\/replace *"\(.*\)" *"\(.*\)".*|\2|p')
+          GLOB=$(echo "$BODY" | sed -n 's/.*path=\([^ ]*\).*/\1/p')
+          [ -z "$GLOB" ] && GLOB="**/*.html"
+          for f in $(rg -l --glob "$GLOB" -- "$OLD"); do
+            sed -i.bak "s|$OLD|$NEW|g" "$f" && rm -f "$f.bak"
+          done
+
+      - name: /swap-logo  (download image + rewire <img> tags)
+        if: contains(github.event.comment.body, '/swap-logo')
+        run: |
+          BODY="${{ github.event.comment.body }}"
+          URL=$(echo "$BODY" | sed -n 's/.*url=\([^ ]*\).*/\1/p')
+          SAVE=$(echo "$BODY" | sed -n 's/.*path=\([^ ]*\).*/\1/p')
+          HTML=$(echo "$BODY" | sed -n 's/.*html=\([^ ]*\).*/\1/p')
+          [ -z "$SAVE" ] && SAVE="murrays-logo.PNG"
+          [ -z "$HTML" ] && HTML="**/*.html"
+          mkdir -p "$(dirname "$SAVE")"
+          curl -L "$URL" -o "$SAVE"
+          for f in $(rg -l --glob "$HTML" -- '<img[^>]*src="[^"]*logo[^"]*"'); do
+            perl -0777 -pe "s|(<img[^>]*src=\")[^\"]*logo[^\"]*(\"[^>]*>)|\1$SAVE\2|gi" -i "$f"
+          done
+
+      - name: Commit to main
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "site-bot"
+            git config user.email "actions@users.noreply.github.com"
+            git add -A
+            git commit -m "SlashOps change from issue comment"
+            git push
+          else
+            echo "No changes to commit."
+          fi
