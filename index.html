@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Murray’s Empire™</title>
 
-  <meta name="description" content="Murray’s Empire™ is a parent brand built for long-term ownership and growth." />
+  <meta name="description" content="Murray’s Empire™ is a privately held brand built with a long-term mindset." />
 
   <style>
     body {
@@ -14,20 +14,20 @@
       color: #ffffff;
       font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
       text-align: center;
-      padding: 36px 18px;
+      padding: 40px 18px;
     }
 
     img {
       max-width: 300px;
-      margin-top: 14px;
+      margin-top: 16px;
       box-shadow: 0 0 15px #00ff99;
       border-radius: 14px;
     }
 
     h1 {
       color: #00ff99;
-      font-size: 38px;
-      margin: 24px 0 6px;
+      font-size: 40px;
+      margin: 26px 0 6px;
       letter-spacing: 1px;
     }
 
@@ -35,53 +35,23 @@
       color: #cfcfcf;
       font-size: 18px;
       font-weight: 400;
-      margin: 0 0 26px;
+      margin: 0 0 30px;
       letter-spacing: 0.4px;
     }
 
     p {
       font-size: 16px;
       line-height: 1.7;
-      max-width: 680px;
-      margin: 0 auto 24px;
+      max-width: 640px;
+      margin: 0 auto;
       color: #dddddd;
     }
 
     footer {
-      margin-top: 40px;
+      margin-top: 48px;
       font-size: 12px;
       color: #9a9a9a;
-      line-height: 1.7;
-    }
-
-    .email-box {
-      border: 1px solid rgba(0,207,255,0.7);
-      padding: 10px 12px;
-      display: inline-flex;
-      gap: 10px;
-      align-items: center;
-      justify-content: center;
-      margin-top: 12px;
-      border-radius: 10px;
-      font-size: 13px;
-      color: #cccccc;
-      flex-wrap: wrap;
-    }
-
-    .copy-btn {
-      cursor: pointer;
-      background: transparent;
-      color: #00cfff;
-      border: 1px solid rgba(0,207,255,0.9);
-      border-radius: 8px;
-      padding: 8px 10px;
-      font-size: 13px;
-      transition: 0.2s;
-    }
-
-    .copy-btn:hover {
-      background: #00cfff;
-      color: #000;
+      letter-spacing: 0.3px;
     }
   </style>
 </head>
@@ -94,34 +64,12 @@
   <h2>Legacy. Systems. Growth.</h2>
 
   <p>
-    Murray’s Empire™ is a privately held brand focused on building with discipline,
-    clarity, and a long-term mindset.
+    Built with discipline, patience, and a long-term vision.
   </p>
 
   <footer>
     © Murray’s Empire™. All rights reserved.
-
-    <div class="email-box">
-      <span id="emailText">crapsedge@gmail.com</span>
-      <button class="copy-btn" onclick="copyEmail()">Copy Email</button>
-      <span id="copyStatus"></span>
-    </div>
   </footer>
-
-  <script>
-    function copyEmail() {
-      const email = document.getElementById("emailText").innerText.trim();
-      const status = document.getElementById("copyStatus");
-
-      navigator.clipboard.writeText(email).then(() => {
-        status.textContent = "Copied!";
-        setTimeout(() => status.textContent = "", 1500);
-      }).catch(() => {
-        status.textContent = "Copy failed";
-        setTimeout(() => status.textContent = "", 2000);
-      });
-    }
-  </script>
 
 </body>
 </html>
