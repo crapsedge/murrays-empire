@@ -3,117 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murray's Empire</title>
+    <title>Murray's Empire™ | Legacy</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
         body {
-            margin: 0;
-            padding: 0;
-            background-color: #050505; /* Deep black background */
-            /* This adds a subtle marble-like texture overlay */
-            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
-                              url('https://images.unsplash.com/photo-1508189860359-750cd049bd22?q=80&w=2070&auto=format&fit=crop');
-            background-size: cover;
-            background-attachment: fixed;
-            font-family: 'Times New Roman', serif;
+            background-color: #000;
+            font-family: 'Garamond', serif;
             color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* 1. CINEMATIC TOP SECTION */
+        .top-hero {
+            height: 60vh;
+            width: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000'); /* Placeholder for your skyline image */
+            background-size: cover;
+            background-position: center;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             align-items: center;
             text-align: center;
         }
 
-        .container {
-            max-width: 800px;
-            padding: 80px 20px;
+        .top-hero h2 {
+            font-size: 2.8rem;
+            color: #e0c097; /* Soft Gold */
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            letter-spacing: 2px;
         }
 
-        .gold-border {
-            border: 1px solid #c5a059; /* Brushed Gold Color */
-            padding: 40px;
-            background: rgba(10, 31, 23, 0.6); /* Transparent Deep Emerald */
-            backdrop-filter: blur(10px);
-            border-radius: 5px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        /* 2. LOGO SECTION */
+        .logo-section {
+            background: #000;
+            padding: 40px 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .emblem {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #c5a059;
+            transform: rotate(45deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgba(197, 160, 89, 0.1);
+            margin-bottom: 40px;
+            box-shadow: 0 0 25px rgba(197, 160, 89, 0.3);
+        }
+
+        .emblem span {
+            transform: rotate(-45deg);
+            font-size: 2rem;
+            color: #c5a059;
+            font-weight: bold;
         }
 
         h1 {
+            color: #00ff88; /* Signature Green */
             font-size: 3rem;
-            letter-spacing: 8px;
-            color: #00ff88; /* Your Signature Green */
+            letter-spacing: 5px;
             text-transform: uppercase;
-            margin-bottom: 10px;
-            text-shadow: 0 0 15px rgba(0, 255, 136, 0.3);
         }
 
-        .tagline {
-            font-size: 1.2rem;
+        .pillar-text {
+            color: #c5a059;
             letter-spacing: 4px;
-            color: #c5a059; /* Gold */
-            margin-bottom: 40px;
-            font-style: italic;
+            margin: 10px 0 30px 0;
+            text-transform: uppercase;
         }
 
-        .main-message {
-            font-size: 2.2rem;
-            line-height: 1.4;
-            font-weight: bold;
-            margin: 20px 0;
+        /* 3. ENDEAVORS SECTION */
+        .endeavors {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1508189860359-750cd049bd22?q=80&w=2000'); /* Marble texture */
+            padding: 60px 20px;
+            border-top: 1px solid #222;
         }
 
-        .sub-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #cccccc;
-            margin-top: 30px;
+        .endeavors-content {
             max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto;
         }
 
+        .endeavors h3 {
+            color: #00ff88;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            font-size: 1.3rem;
+        }
+
+        ul li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            color: #e0e0e0;
+        }
+
+        ul li::before {
+            content: "•";
+            color: #00ff88;
+            position: absolute;
+            left: 0;
+        }
+
+        /* 4. FOOTER / DISCLAIMER */
         footer {
-            margin-top: 100px;
-            padding: 40px;
-            font-size: 0.8rem;
-            color: #666;
-            border-top: 1px solid #333;
-            width: 100%;
-        }
-
-        .disclaimer {
-            max-width: 700px;
-            margin: 20px auto;
-            line-height: 1.5;
+            padding: 40px 20px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #444;
+            background: #000;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <div class="gold-border">
-            <h1>Murray’s Empire™</h1>
-            <div class="tagline">LEGACY • SYSTEMS • GROWTH</div>
-            
-            <div class="main-message">
-                BORN INTO STRUGGLE.<br>
-                BUILT INTO LEGACY.
-            </div>
+    <section class="top-hero">
+        <h2>Born into Struggle.<br>Built into Legacy.</h2>
+    </section>
 
-            <p class="sub-text">
-                Architecture of the future. Built with discipline, patience, and an 
-                unwavering long-term vision. We turn systems into power 
-                and effort into an eternal foundation.
-            </p>
+    <section class="logo-section">
+        <div class="emblem">
+            <span>ME</span>
         </div>
-    </div>
+        <h1>Murray’s Empire™</h1>
+        <p class="pillar-text">Legacy. Systems. Growth.</p>
+        <p style="max-width: 500px; color: #aaa; padding: 0 20px;">Built with discipline, patience, and a long-term vision.</p>
+    </section>
+
+    <section class="endeavors">
+        <div class="endeavors-content">
+            <h3>Key Endeavors</h3>
+            <ul>
+                <li>Infrastructure Development</li>
+                <li>Global Market Systems</li>
+                <li>Sustainable Ventures Initiative</li>
+            </ul>
+        </div>
+    </section>
 
     <footer>
-        <p>© 2025 MURRAY’S EMPIRE™. ALL RIGHTS RESERVED.</p>
-        <div class="disclaimer">
-            <strong>Legal Notice:</strong> Murray’s Empire is a brand identity and vision. 
-            The content provided here is for informational and aspirational purposes only and does 
-            not constitute financial, legal, or investment advice. "Trillion-dollar company" 
-            refers to a long-term goal and mission statement, not a current valuation.
-        </div>
+        <p>© Murray’s Empire™. All rights reserved.</p>
+        <p style="margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
+            Disclaimer: Murray's Empire is a brand vision. This site is for informational/aspirational purposes only and does not provide financial or legal advice.
+        </p>
     </footer>
 
 </body>
