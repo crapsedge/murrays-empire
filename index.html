@@ -16,10 +16,10 @@
 
         /* 1. CINEMATIC TOP SECTION */
         .top-hero {
-            height: 60vh;
+            height: 65vh;
             width: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000), 
-                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000'); /* Placeholder for your skyline image */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), #000), 
+                        url('hero.png'); /* Ensure your file is named hero.png */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -30,16 +30,17 @@
         }
 
         .top-hero h2 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             color: #e0c097; /* Soft Gold */
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.8);
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
             letter-spacing: 2px;
+            font-weight: normal;
         }
 
-        /* 2. LOGO SECTION */
-        .logo-section {
+        /* 2. LOGO & BRAND SECTION */
+        .brand-area {
             background: #000;
-            padding: 40px 0;
+            padding: 60px 20px;
             text-align: center;
             display: flex;
             flex-direction: column;
@@ -47,84 +48,87 @@
         }
 
         .emblem {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             border: 2px solid #c5a059;
             transform: rotate(45deg);
             display: flex;
             justify-content: center;
             align-items: center;
             background: rgba(197, 160, 89, 0.1);
-            margin-bottom: 40px;
+            margin-bottom: 50px;
             box-shadow: 0 0 25px rgba(197, 160, 89, 0.3);
         }
 
         .emblem span {
             transform: rotate(-45deg);
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: #c5a059;
             font-weight: bold;
         }
 
         h1 {
             color: #00ff88; /* Signature Green */
-            font-size: 3rem;
-            letter-spacing: 5px;
+            font-size: 2.8rem;
+            letter-spacing: 6px;
             text-transform: uppercase;
+            margin-bottom: 10px;
         }
 
         .pillar-text {
             color: #c5a059;
-            letter-spacing: 4px;
-            margin: 10px 0 30px 0;
+            letter-spacing: 5px;
+            margin-bottom: 40px;
             text-transform: uppercase;
+            font-size: 0.9rem;
         }
 
-        /* 3. ENDEAVORS SECTION */
-        .endeavors {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
-                        url('https://images.unsplash.com/photo-1508189860359-750cd049bd22?q=80&w=2000'); /* Marble texture */
-            padding: 60px 20px;
-            border-top: 1px solid #222;
-        }
-
-        .endeavors-content {
+        .mission-text {
             max-width: 600px;
-            margin: 0 auto;
+            color: #aaa;
+            font-size: 1.1rem;
+            font-style: italic;
+            line-height: 1.8;
         }
 
-        .endeavors h3 {
+        /* 3. INQUIRIES SECTION (Replaces Endeavors) */
+        .contact-section {
+            padding: 80px 20px;
+            border-top: 1px solid #1a1a1a;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
+                        url('https://www.transparenttextures.com/patterns/dark-matter.png');
+        }
+
+        .contact-section h3 {
             color: #00ff88;
-            font-size: 1.8rem;
-            text-transform: uppercase;
             letter-spacing: 3px;
+            text-transform: uppercase;
             margin-bottom: 20px;
         }
 
-        ul {
-            list-style: none;
-            font-size: 1.3rem;
+        .btn-gold {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid #c5a059;
+            color: #c5a059;
+            text-decoration: none;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.8rem;
         }
 
-        ul li {
-            margin-bottom: 15px;
-            padding-left: 25px;
-            position: relative;
-            color: #e0e0e0;
-        }
-
-        ul li::before {
-            content: "•";
-            color: #00ff88;
-            position: absolute;
-            left: 0;
+        .btn-gold:hover {
+            background: #c5a059;
+            color: #000;
         }
 
         /* 4. FOOTER / DISCLAIMER */
         footer {
             padding: 40px 20px;
             text-align: center;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #444;
             background: #000;
         }
@@ -136,30 +140,28 @@
         <h2>Born into Struggle.<br>Built into Legacy.</h2>
     </section>
 
-    <section class="logo-section">
+    <section class="brand-area">
         <div class="emblem">
             <span>ME</span>
         </div>
         <h1>Murray’s Empire™</h1>
-        <p class="pillar-text">Legacy. Systems. Growth.</p>
-        <p style="max-width: 500px; color: #aaa; padding: 0 20px;">Built with discipline, patience, and a long-term vision.</p>
+        <p class="pillar-text">Legacy • Systems • Growth</p>
+        <p class="mission-text">
+            Built with discipline, patience, and a long-term vision. <br>
+            We turn systems into power and effort into an eternal foundation.
+        </p>
     </section>
 
-    <section class="endeavors">
-        <div class="endeavors-content">
-            <h3>Key Endeavors</h3>
-            <ul>
-                <li>Infrastructure Development</li>
-                <li>Global Market Systems</li>
-                <li>Sustainable Ventures Initiative</li>
-            </ul>
-        </div>
+    <section class="contact-section">
+        <h3>Private Inquiries</h3>
+        <p style="color: #666; margin-bottom: 30px;">Direct all correspondence via the link below.</p>
+        <a href="mailto:your-email@example.com" class="btn-gold">Contact the Empire</a>
     </section>
 
     <footer>
-        <p>© Murray’s Empire™. All rights reserved.</p>
-        <p style="margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto;">
-            Disclaimer: Murray's Empire is a brand vision. This site is for informational/aspirational purposes only and does not provide financial or legal advice.
+        <p>© 2025 Murray’s Empire™. All rights reserved.</p>
+        <p style="margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+            Disclaimer: Murray's Empire is a brand vision. This site is for informational and aspirational purposes only and does not provide financial or legal advice. "Trillion-dollar company" refers to a long-term mission and internal growth milestone.
         </p>
     </footer>
 
