@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murray's Empire™ | Legacy</title>
+    <title>Murray’s Empire™ | Legacy</title>
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -14,154 +15,172 @@
             line-height: 1.6;
         }
 
-        /* 1. CINEMATIC TOP SECTION */
+        /* CINEMATIC HERO */
         .top-hero {
             height: 65vh;
             width: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2), #000), 
-                        url('hero.png'); /* Ensure your file is named hero.png */
+            background: linear-gradient(to bottom, rgba(0,0,0,0.25), #000),
+            url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000');
             background-size: cover;
             background-position: center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
         }
 
         .top-hero h2 {
-            font-size: 3rem;
-            color: #e0c097; /* Soft Gold */
-            text-shadow: 2px 2px 15px rgba(0,0,0,0.9);
+            font-size: 2.8rem;
+            color: #e0c097;
             letter-spacing: 2px;
-            font-weight: normal;
+            text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
         }
 
-        /* 2. LOGO & BRAND SECTION */
-        .brand-area {
+        /* LOGO / BRAND */
+        .logo-section {
             background: #000;
             padding: 60px 20px;
             text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
 
         .emblem {
-            width: 90px;
-            height: 90px;
+            width: 110px;
+            height: 110px;
             border: 2px solid #c5a059;
             transform: rotate(45deg);
             display: flex;
             justify-content: center;
             align-items: center;
-            background: rgba(197, 160, 89, 0.1);
-            margin-bottom: 50px;
-            box-shadow: 0 0 25px rgba(197, 160, 89, 0.3);
+            margin: 0 auto 40px;
+            box-shadow: 0 0 30px rgba(197,160,89,0.35);
+            background: rgba(197,160,89,0.08);
         }
 
         .emblem span {
             transform: rotate(-45deg);
-            font-size: 1.8rem;
-            color: #c5a059;
+            font-size: 2.2rem;
             font-weight: bold;
+            color: #c5a059;
         }
 
         h1 {
-            color: #00ff88; /* Signature Green */
-            font-size: 2.8rem;
+            color: #00ff88;
+            font-size: 3rem;
             letter-spacing: 6px;
             text-transform: uppercase;
-            margin-bottom: 10px;
         }
 
         .pillar-text {
             color: #c5a059;
-            letter-spacing: 5px;
-            margin-bottom: 40px;
+            letter-spacing: 4px;
+            margin: 15px 0 30px;
             text-transform: uppercase;
             font-size: 0.9rem;
         }
 
-        .mission-text {
-            max-width: 600px;
+        .brand-description {
+            max-width: 520px;
+            margin: auto;
             color: #aaa;
-            font-size: 1.1rem;
-            font-style: italic;
-            line-height: 1.8;
+            font-size: 1rem;
         }
 
-        /* 3. INQUIRIES SECTION (Replaces Endeavors) */
-        .contact-section {
-            padding: 80px 20px;
-            border-top: 1px solid #1a1a1a;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), 
-                        url('https://www.transparenttextures.com/patterns/dark-matter.png');
+        /* ENDEAVORS */
+        .endeavors {
+            background:
+            linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)),
+            url('https://images.unsplash.com/photo-1508189860359-750cd049bd22?q=80&w=2000');
+            background-size: cover;
+            padding: 70px 20px;
+            border-top: 1px solid #222;
         }
 
-        .contact-section h3 {
+        .endeavors-content {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .endeavors h3 {
             color: #00ff88;
+            text-transform: uppercase;
             letter-spacing: 3px;
-            text-transform: uppercase;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
+            font-size: 1.6rem;
         }
 
-        .btn-gold {
-            display: inline-block;
-            padding: 15px 40px;
-            border: 1px solid #c5a059;
-            color: #c5a059;
-            text-decoration: none;
-            letter-spacing: 2px;
-            transition: 0.3s;
-            text-transform: uppercase;
-            font-size: 0.8rem;
+        ul {
+            list-style: none;
+            font-size: 1.2rem;
         }
 
-        .btn-gold:hover {
-            background: #c5a059;
-            color: #000;
+        ul li {
+            margin-bottom: 18px;
+            padding-left: 25px;
+            position: relative;
+            color: #e0e0e0;
         }
 
-        /* 4. FOOTER / DISCLAIMER */
+        ul li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+        }
+
+        /* FOOTER */
         footer {
-            padding: 40px 20px;
-            text-align: center;
-            font-size: 0.7rem;
-            color: #444;
             background: #000;
+            padding: 45px 20px;
+            text-align: center;
+            font-size: 0.75rem;
+            color: #555;
+        }
+
+        footer p {
+            max-width: 650px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
 
     <section class="top-hero">
-        <h2>Born into Struggle.<br>Built into Legacy.</h2>
+        <h2>Born Into Pressure.<br>Built Into Legacy.</h2>
     </section>
 
-    <section class="brand-area">
+    <section class="logo-section">
         <div class="emblem">
             <span>ME</span>
         </div>
+
         <h1>Murray’s Empire™</h1>
-        <p class="pillar-text">Legacy • Systems • Growth</p>
-        <p class="mission-text">
-            Built with discipline, patience, and a long-term vision. <br>
-            We turn systems into power and effort into an eternal foundation.
+        <div class="pillar-text">Legacy • Systems • Growth</div>
+
+        <p class="brand-description">
+            Murray’s Empire™ is a long-term brand vision focused on building disciplined systems,
+            sustainable ventures, and generational infrastructure through patience, execution,
+            and strategic thinking.
         </p>
     </section>
 
-    <section class="contact-section">
-        <h3>Private Inquiries</h3>
-        <p style="color: #666; margin-bottom: 30px;">Direct all correspondence via the link below.</p>
-        <a href="mailto:your-email@example.com" class="btn-gold">Contact the Empire</a>
+    <section class="endeavors">
+        <div class="endeavors-content">
+            <h3>Core Endeavors</h3>
+            <ul>
+                <li>Infrastructure & Asset Development</li>
+                <li>Digital & Global Market Systems</li>
+                <li>Long-Term Sustainable Ventures</li>
+            </ul>
+        </div>
     </section>
 
     <footer>
-        <p>© 2025 Murray’s Empire™. All rights reserved.</p>
-        <p style="margin-top: 15px; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.4;">
-            Disclaimer: Murray's Empire is a brand vision. This site is for informational and aspirational purposes only and does not provide financial or legal advice. "Trillion-dollar company" refers to a long-term mission and internal growth milestone.
+        <p>© Murray’s Empire™. All rights reserved.</p>
+        <p style="margin-top: 15px;">
+            Legal Disclaimer: Murray’s Empire™ is a brand and holding-style vision. Content on this site
+            is for informational and aspirational purposes only and does not constitute financial,
+            legal, or investment advice. No guarantees are expressed or implied.
         </p>
     </footer>
 
