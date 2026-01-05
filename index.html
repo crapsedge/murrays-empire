@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Murray’s Empire™ | Legacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        /* === GLOBAL BACKGROUND (LUXURY MARBLE STYLE) === */
         body {
-            min-height: 100vh;
-            font-family: 'Garamond', serif;
+            /* This creates the dark marble / geometric tile look from your image */
+            background-color: #050a08;
+            background-image: 
+                linear-gradient(135deg, rgba(12, 45, 30, 0.8) 0%, rgba(0, 0, 0, 0.9) 100%),
+                url('https://www.transparenttextures.com/patterns/black-mamba.png'); /* Subtle marble texture */
+            font-family: 'Montserrat', sans-serif;
             color: #ffffff;
             line-height: 1.6;
-            background:
-                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
-                url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=2400');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            overflow-x: hidden;
         }
 
-        /* === HERO (UNCHANGED CONTENT, ENHANCED DEPTH) === */
+        /* HERO - Adjusted to blend into the new aesthetic */
         .top-hero {
-            height: 65vh;
+            height: 60vh;
             width: 100%;
-            background:
-                linear-gradient(to bottom, rgba(0,0,0,0.3), #000),
-                url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000');
+            background: linear-gradient(to bottom, rgba(0,0,0,0.2), #050a08),
+            url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -36,83 +34,119 @@
             align-items: center;
             text-align: center;
             padding: 20px;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
         }
 
         .top-hero h2 {
-            font-size: 2.8rem;
+            font-family: 'Cinzel', serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
             color: #e0c097;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
+            letter-spacing: 4px;
+            text-shadow: 2px 4px 15px rgba(0,0,0,1);
         }
 
-        /* === BRAND SECTION (FLOATING PREMIUM PANEL LOOK) === */
+        /* BRAND SECTION */
         .logo-section {
-            padding: 70px 20px;
+            padding: 80px 20px;
             text-align: center;
-            background: rgba(10, 15, 12, 0.65);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+            position: relative;
         }
 
+        /* EMBLEM - Updated to match the gold hexagon style */
         .emblem {
-            width: 110px;
+            width: 100px;
             height: 110px;
-            border: 2px solid #c5a059;
-            transform: rotate(45deg);
+            background: #1a1a1a;
+            margin: 0 auto 40px;
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            margin: 0 auto 40px;
-            box-shadow: 0 0 30px rgba(197,160,89,0.45);
-            background: rgba(197,160,89,0.12);
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            border: 2px solid #c5a059;
+            box-shadow: 0 0 40px rgba(197,160,89,0.2);
+        }
+
+        /* Create the gold border effect for clip-path */
+        .emblem::before {
+            content: "";
+            position: absolute;
+            top: 2px; left: 2px; right: 2px; bottom: 2px;
+            background: #000;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            z-index: 1;
         }
 
         .emblem span {
-            transform: rotate(-45deg);
-            font-size: 2.2rem;
+            position: relative;
+            z-index: 2;
+            font-family: 'Cinzel', serif;
+            font-size: 2rem;
             font-weight: bold;
             color: #c5a059;
+            text-shadow: 0 0 10px rgba(197,160,89,0.5);
         }
 
         h1 {
-            color: #00ff88;
-            font-size: 3rem;
-            letter-spacing: 6px;
-            text-transform: uppercase;
+            color: #00ff88; /* The vibrant green from your screenshot */
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            letter-spacing: 2px;
+            margin-bottom: 10px;
         }
 
         .pillar-text {
             color: #c5a059;
-            letter-spacing: 4px;
-            margin: 15px 0 30px;
+            letter-spacing: 5px;
+            margin: 10px 0 40px;
             text-transform: uppercase;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            opacity: 0.9;
         }
 
         .brand-description {
-            max-width: 520px;
+            max-width: 550px;
             margin: auto;
-            color: #cfcfcf;
-            font-size: 1rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+            font-weight: 300;
+            line-height: 1.8;
         }
 
-        /* === FOOTER (CLEAN, TRUST-BUILDING) === */
+        /* FOOTER */
         footer {
-            background: rgba(0,0,0,0.85);
-            padding: 45px 20px;
+            background: rgba(0,0,0,0.5);
+            padding: 60px 20px;
             text-align: center;
             font-size: 0.75rem;
-            color: #777;
+            color: #666;
+            border-top: 1px solid rgba(197, 160, 89, 0.1);
         }
 
         footer p {
             max-width: 650px;
             margin: auto;
+            letter-spacing: 1px;
+        }
+
+        /* Adding a subtle overlay to the body for the 'tiled' look */
+        .bg-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(rgba(197, 160, 89, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(197, 160, 89, 0.05) 1px, transparent 1px);
+            background-size: 100px 100px;
+            pointer-events: none;
+            z-index: -1;
         }
     </style>
 </head>
 <body>
+
+    <div class="bg-overlay"></div>
 
     <section class="top-hero">
         <h2>Born into Struggle.<br>Built into Legacy.</h2>
@@ -135,7 +169,7 @@
 
     <footer>
         <p>© Murray’s Empire™. All rights reserved.</p>
-        <p style="margin-top: 15px;">
+        <p style="margin-top: 20px; line-height: 1.4; opacity: 0.6;">
             Legal Disclaimer: Murray’s Empire™ is a brand and vision. This site is for
             informational and aspirational purposes only and does not provide financial,
             legal, or investment advice. No guarantees are expressed or implied.
