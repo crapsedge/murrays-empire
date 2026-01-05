@@ -8,19 +8,27 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        /* === GLOBAL BACKGROUND (LUXURY MARBLE STYLE) === */
         body {
-            background-color: #000;
+            min-height: 100vh;
             font-family: 'Garamond', serif;
             color: #ffffff;
             line-height: 1.6;
+            background:
+                linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+                url('https://images.unsplash.com/photo-1549880338-65ddcdfd017b?q=80&w=2400');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
 
-        /* HERO */
+        /* === HERO (UNCHANGED CONTENT, ENHANCED DEPTH) === */
         .top-hero {
             height: 65vh;
             width: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000),
-            url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000');
+            background:
+                linear-gradient(to bottom, rgba(0,0,0,0.3), #000),
+                url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -37,10 +45,14 @@
             text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
         }
 
-        /* BRAND */
+        /* === BRAND SECTION (FLOATING PREMIUM PANEL LOOK) === */
         .logo-section {
             padding: 70px 20px;
             text-align: center;
+            background: rgba(10, 15, 12, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.6);
         }
 
         .emblem {
@@ -52,8 +64,8 @@
             justify-content: center;
             align-items: center;
             margin: 0 auto 40px;
-            box-shadow: 0 0 30px rgba(197,160,89,0.35);
-            background: rgba(197,160,89,0.08);
+            box-shadow: 0 0 30px rgba(197,160,89,0.45);
+            background: rgba(197,160,89,0.12);
         }
 
         .emblem span {
@@ -81,17 +93,17 @@
         .brand-description {
             max-width: 520px;
             margin: auto;
-            color: #aaa;
+            color: #cfcfcf;
             font-size: 1rem;
         }
 
-        /* FOOTER */
+        /* === FOOTER (CLEAN, TRUST-BUILDING) === */
         footer {
-            background: #000;
+            background: rgba(0,0,0,0.85);
             padding: 45px 20px;
             text-align: center;
             font-size: 0.75rem;
-            color: #555;
+            color: #777;
         }
 
         footer p {
