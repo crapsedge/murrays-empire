@@ -1,4 +1,4 @@
-<div id="murray-master-shadow">
+<div id="murray-shadow-final">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,205 +9,163 @@
         :root {
             --primary: #00ff66;
             --bg: #000;
-            --card: #0a0a0a;
             --border: #1a1a1a;
-            --text-muted: #666;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             background-color: var(--bg);
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: 'Inter', sans-serif;
             color: #ffffff;
             line-height: 1.6;
             overflow-x: hidden;
         }
 
-        /* SHADOW ARCHITECT HEADER */
-        header {
+        /* THE SHADOW ARCHITECT BACKGROUND */
+        .hero-section {
             height: 100vh;
+            width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
-            padding: 20px;
-            /* Using a high-end corporate skyscraper at night to represent the empire built from shadows */
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.95)), 
-                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070');
+            position: relative;
+            /* IMAGE REPRESENTS THE 1 MAN IN THE SHADOWS CONCEPT */
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                        url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070'); /* Dark data-flow background */
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            text-align: center;
         }
 
         .emblem {
-            width: 80px;
-            height: 80px;
+            width: 70px;
+            height: 70px;
             border: 1px solid var(--primary);
             transform: rotate(45deg);
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-bottom: 40px;
-            background: rgba(0, 255, 102, 0.05);
-            box-shadow: 0 0 30px rgba(0, 255, 102, 0.2);
+            margin-bottom: 30px;
+            box-shadow: 0 0 50px rgba(0, 255, 102, 0.2);
         }
 
         .emblem span {
             transform: rotate(-45deg);
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 200;
             letter-spacing: 2px;
             color: var(--primary);
         }
 
         h1 {
-            font-size: 3.5rem;
+            font-size: 3rem;
             font-weight: 200;
-            letter-spacing: 12px;
+            letter-spacing: 18px;
             text-transform: uppercase;
-            color: #fff;
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
 
-        .llc-badge {
-            font-size: 0.8rem;
-            letter-spacing: 4px;
+        .tagline {
+            font-size: 0.7rem;
+            letter-spacing: 8px;
             color: var(--primary);
             text-transform: uppercase;
-            margin-bottom: 40px;
-            opacity: 0.9;
-            font-weight: bold;
+            margin-bottom: 50px;
         }
 
-        /* EXECUTIVE PORTFOLIO SECTION */
-        .portfolio {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 100px 20px;
-            background-color: var(--bg);
-        }
-
-        .brand-row {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 60px 0;
-            border-bottom: 1px solid var(--border);
-            transition: 0.4s ease;
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .brand-row:hover {
-            padding-left: 20px;
-            background: rgba(255,255,255,0.02);
-        }
-
-        .brand-info h3 {
-            font-size: 2rem;
-            font-weight: 300;
-            color: var(--primary);
-            margin-bottom: 10px;
-        }
-
-        .brand-info p {
-            color: #888;
-            max-width: 500px;
-            font-size: 0.95rem;
-        }
-
-        .brand-link {
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: #fff;
-            border: 1px solid #333;
-            padding: 12px 30px;
-            transition: 0.3s;
-        }
-
-        .brand-row:hover .brand-link {
-            background: var(--primary);
-            color: #000;
-            border-color: var(--primary);
-        }
-
-        footer {
-            padding: 100px 20px;
-            background: #050505;
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-
-        .footer-nav a {
-            color: #555;
-            text-decoration: none;
-            margin: 0 20px;
-            font-size: 0.8rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-
-        .footer-nav a:hover { color: var(--primary); }
-
-        .legal-text {
+        /* MINIMALIST BRAND LIST - NO TACKY BOXES */
+        .portfolio-list {
             max-width: 800px;
-            margin: 0 auto;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .brand-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            text-decoration: none;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .brand-item:hover {
+            border-color: var(--primary);
+            padding-left: 15px;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        .brand-desc {
+            font-size: 0.8rem;
+            color: #555;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* CORPORATE FOOTER */
+        footer {
+            padding: 60px 20px;
+            text-align: center;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
             color: #333;
-            font-size: 0.75rem;
+        }
+
+        footer a { color: #555; text-decoration: none; margin: 0 15px; }
+        footer a:hover { color: var(--primary); }
+
+        .legal-footer {
+            max-width: 600px;
+            margin: 40px auto 0;
             line-height: 2;
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <section class="hero-section">
         <div class="emblem">
             <span>ME</span>
         </div>
         <h1>Murray’s Empire</h1>
-        <div class="llc-badge">Strategic Holding Company</div>
-    </header>
+        <div class="tagline">Strategic Holding Company</div>
 
-    <main class="portfolio">
-        <a href="https://brainhustle.store" class="brand-row" target="_blank">
-            <div class="brand-info">
-                <h3>BrainHustle™</h3>
-                <p>Advanced digital profit systems and architectural business automation.</p>
-            </div>
-            <div class="brand-link">Enter Site</div>
-        </a>
-
-        <a href="https://crapsedge.store" class="brand-row" target="_blank">
-            <div class="brand-info">
-                <h3>CrapsEdge™</h3>
-                <p>Educational infrastructure for casino mechanics and behavioral awareness.</p>
-            </div>
-            <div class="brand-link">Enter Site</div>
-        </a>
-
-        <a href="https://omaharestoration.store" class="brand-row" target="_blank">
-            <div class="brand-info">
-                <h3>Omaha Restoration</h3>
-                <p>Regional leader in high-tier residential and commercial property restoration.</p>
-            </div>
-            <div class="brand-link">Enter Site</div>
-        </a>
-    </main>
+        <div class="portfolio-list">
+            <a href="https://brainhustle.store" class="brand-item">
+                <span class="brand-name">BrainHustle™</span>
+                <span class="brand-desc">Digital Systems</span>
+            </a>
+            <a href="https://crapsedge.store" class="brand-item">
+                <span class="brand-name">CrapsEdge™</span>
+                <span class="brand-desc">Behavioral Education</span>
+            </a>
+            <a href="https://omaharestoration.store" class="brand-item">
+                <span class="brand-name">Omaha Restoration</span>
+                <span class="brand-desc">Structural Preservation</span>
+            </a>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-nav">
-            <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="mailto:murraysempirellc@gmail.com">Contact</a>
+        <div class="footer-links">
+            <a href="terms.html">TERMS</a>
+            <a href="privacy.html">PRIVACY</a>
+            <a href="mailto:murraysempirellc@gmail.com">CONTACT</a>
         </div>
-        <p style="color: #666; margin-bottom: 20px;">© 2026 Murray’s Empire LLC. All Rights Reserved.</p>
-        <p class="legal-text">
-            Murray’s Empire LLC operates as the master holding entity for all governing sub-brands including BrainHustle™, CrapsEdge™, and Omaha Restoration. Strategic operations, financial asset management, and legal infrastructure are unified under this corporate pillar. Content provided is for educational purposes only and does not constitute financial or professional investment advice.
-        </p>
+        <div class="legal-footer">
+            © 2026 MURRAY’S EMPIRE LLC. ALL RIGHTS RESERVED.<br>
+            A PRIVATE HOLDING ENTITY OVERSEEING DIVERSIFIED ASSETS.<br>
+            CONTENT IS FOR EDUCATIONAL PURPOSES ONLY.
+        </div>
     </footer>
 
 </body>
