@@ -1,9 +1,10 @@
+<div id="murray-index-code">
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Murray’s Empire™ | Legacy</title>
+    <title>Murray’s Empire LLC | Parent Holding Company</title>
 
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -17,9 +18,9 @@
 
         /* HERO */
         .top-hero {
-            height: 65vh;
+            height: 60vh;
             width: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.3), #000),
+            background: linear-gradient(to bottom, rgba(0,0,0,0.5), #000),
             url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?q=80&w=2000');
             background-size: cover;
             background-position: center;
@@ -31,15 +32,15 @@
         }
 
         .top-hero h2 {
-            font-size: 2.8rem;
+            font-size: 3rem;
             color: #e0c097;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 12px rgba(0,0,0,0.9);
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 15px rgba(0,0,0,1);
         }
 
-        /* BRAND */
+        /* LOGO SECTION */
         .logo-section {
-            padding: 70px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -52,7 +53,7 @@
             justify-content: center;
             align-items: center;
             margin: 0 auto 40px;
-            box-shadow: 0 0 30px rgba(197,160,89,0.35);
+            box-shadow: 0 0 40px rgba(197,160,89,0.4);
             background: rgba(197,160,89,0.08);
         }
 
@@ -68,36 +69,75 @@
             font-size: 3rem;
             letter-spacing: 6px;
             text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .llc-text {
+            color: #fff;
+            font-size: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
         }
 
         .pillar-text {
             color: #c5a059;
-            letter-spacing: 4px;
+            letter-spacing: 5px;
             margin: 15px 0 30px;
             text-transform: uppercase;
             font-size: 0.9rem;
         }
 
         .brand-description {
-            max-width: 520px;
+            max-width: 600px;
             margin: auto;
-            color: #aaa;
-            font-size: 1rem;
+            color: #ccc;
+            font-size: 1.1rem;
+            margin-bottom: 60px;
         }
+
+        /* PORTFOLIO GRID */
+        .portfolio-title { color: #c5a059; letter-spacing: 3px; margin-bottom: 40px; text-transform: uppercase; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 0 auto 80px;
+            padding: 0 20px;
+        }
+
+        .brand-card {
+            background: #0a0a0a;
+            border: 1px solid #1a1a1a;
+            border-radius: 12px;
+            padding: 35px;
+            transition: 0.4s;
+            text-decoration: none;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .brand-card:hover { border-color: #00ff88; transform: translateY(-8px); }
+        .brand-card h3 { color: #00ff88; margin-bottom: 12px; font-size: 1.4rem; letter-spacing: 1px; }
+        .brand-card p { color: #888; font-size: 0.9rem; line-height: 1.5; }
 
         /* FOOTER */
         footer {
             background: #000;
-            padding: 45px 20px;
+            padding: 60px 20px;
             text-align: center;
-            font-size: 0.75rem;
+            font-size: 0.8rem;
             color: #555;
+            border-top: 1px solid #111;
         }
 
-        footer p {
-            max-width: 650px;
-            margin: auto;
-        }
+        footer a { color: #00ff88; text-decoration: none; margin: 0 10px; }
+        footer p { max-width: 750px; margin: auto; line-height: 1.8; }
+        .legal-block { margin-top: 25px; padding-top: 25px; border-top: 1px solid #111; }
     </style>
 </head>
 <body>
@@ -111,24 +151,50 @@
             <span>ME</span>
         </div>
 
-        <h1>Murray’s Empire™</h1>
+        <h1>Murray’s Empire</h1>
+        <span class="llc-text">Managing Member: Shawn Murray Jr.</span>
         <div class="pillar-text">Legacy • Systems • Growth</div>
 
         <p class="brand-description">
-            Murray’s Empire™ is built with discipline, patience, and long-term vision.
-            This brand represents ownership, structure, and the mindset required
-            to build something that lasts beyond one generation.
+            Murray’s Empire LLC is the master holding company governing a diversified portfolio of digital systems, 
+            educational brands, and specialized services. Built with discipline and long-term vision, 
+            we architect structures designed for generational sustainability.
         </p>
+
+        <h2 class="portfolio-title">Sub-Brand Portfolio</h2>
+        <div class="grid">
+            <a href="https://brainhustle.store" class="brand-card">
+                <h3>BrainHustle™</h3>
+                <p>Digital profit systems, AI tools, and business automation strategies for the modern architect.</p>
+            </a>
+            <a href="https://murrayempires.com/crapsedge" class="brand-card">
+                <h3>CrapsEdge™</h3>
+                <p>Experiential education in casino mechanics, dice control concepts, and gambling behavior awareness.</p>
+            </a>
+            <a href="https://omaharestoration.store" class="brand-card">
+                <h3>Omaha Restoration</h3>
+                <p>Professional residential and commercial restoration services delivering quality to the Nebraska region.</p>
+            </a>
+        </div>
     </section>
 
     <footer>
-        <p>© Murray’s Empire™. All rights reserved.</p>
-        <p style="margin-top: 15px;">
-            Legal Disclaimer: Murray’s Empire™ is a brand and vision. This site is for
-            informational and aspirational purposes only and does not provide financial,
-            legal, or investment advice. No guarantees are expressed or implied.
+        <p>
+            <a href="terms.html">Terms of Service</a> | 
+            <a href="privacy.html">Privacy Policy</a>
         </p>
+        <p style="margin-top: 15px;">© 2026 Murray’s Empire LLC. All rights reserved.</p>
+        
+        <div class="legal-block">
+            <p>
+                <strong>Corporate Disclaimer:</strong> Murray’s Empire LLC is the parent holding company for all governed sub-brands. 
+                Content provided is for educational and informational purposes only and does not constitute financial, 
+                legal, or professional investment advice. All financial responsibilities, contracts, and legal matters 
+                are managed under the authority of Murray’s Empire LLC.
+            </p>
+        </div>
     </footer>
 
 </body>
 </html>
+</div>
