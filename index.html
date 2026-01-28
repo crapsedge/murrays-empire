@@ -12,201 +12,200 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="cCSyD8XgkEI9JMahtn2x6Pgr9Cx5uhG4n9sKnP8aU8k" />
-
   <title>Murrays Empire LLC</title>
 
-  <meta name="description" content="Murrays Empire LLC is a privately held U.S. entity overseeing automated and educational digital brands." />
+  <meta name="description" content="Murrays Empire LLC oversees automated and educational digital brands." />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://murrayempires.com" />
 
   <style>
-    :root {
-      --primary: #00ff66;
-      --bg: #000;
-      --border: rgba(255,255,255,0.08);
-      --muted: rgba(255,255,255,0.55);
-      --muted2: rgba(255,255,255,0.35);
+    :root{
+      --primary:#00ff66;
+      --bg:#000;
+      --border:rgba(255,255,255,0.08);
+      --muted:rgba(255,255,255,0.62);
+      --muted2:rgba(255,255,255,0.40);
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      background:var(--bg);
+      font-family:-apple-system,BlinkMacSystemFont,"Inter","Segoe UI",Roboto,Arial,sans-serif;
+      color:#fff;
+      line-height:1.6;
+      overflow-x:hidden;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Arial, sans-serif;
-      color: #fff;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    .hero-section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 70px 20px 50px;
+    .hero{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      padding:64px 18px 46px;
       background:
+        radial-gradient(900px 420px at 50% 15%, rgba(0,255,102,0.12), transparent 60%),
         linear-gradient(rgba(0,0,0,0.86), rgba(0,0,0,0.86)),
         url("https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070");
-      background-size: cover;
-      background-position: center;
+      background-size:cover;
+      background-position:center;
     }
 
-    /* ME LOGO + LEGACY */
-    .me-logo-wrap {
-      text-align: center;
-      margin-bottom: 38px;
+    .logo-wrap{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:14px;
+      margin-bottom:22px;
     }
 
-    .me-logo {
-      width: 96px;
-      height: auto;
-      margin-bottom: 14px;
-      filter: drop-shadow(0 0 18px rgba(0,255,102,0.35));
+    .logo{
+      width:min(220px, 68vw);
+      height:auto;
+      filter:drop-shadow(0 0 22px rgba(0,255,102,0.30));
     }
 
-    .me-legacy {
-      font-size: 0.7rem;
-      letter-spacing: 6px;
-      text-transform: uppercase;
-      color: var(--primary);
-      opacity: 0.85;
+    .tagline{
+      font-size:0.78rem;
+      letter-spacing:4px;
+      text-transform:uppercase;
+      color:var(--primary);
+      opacity:0.90;
     }
 
-    h1 {
-      font-size: clamp(2.2rem, 5vw, 3.2rem);
-      font-weight: 200;
-      letter-spacing: 14px;
-      text-transform: uppercase;
-      margin-bottom: 14px;
+    h1{
+      font-size:clamp(2.0rem, 8vw, 3.1rem);
+      font-weight:300;
+      letter-spacing:6px;
+      text-transform:uppercase;
+      margin:8px 0 12px;
     }
 
-    .authority {
-      max-width: 850px;
-      font-size: 0.92rem;
-      color: var(--muted);
-      margin-bottom: 48px;
-      line-height: 1.85;
+    .authority{
+      max-width:840px;
+      font-size:0.98rem;
+      color:var(--muted);
+      line-height:1.9;
+      margin:0 auto 30px;
+      padding:0 6px;
     }
 
-    .portfolio-list {
-      max-width: 880px;
-      width: 100%;
+    .legal{
+      margin-top:10px;
+      color:rgba(255,255,255,0.55);
+      font-size:0.92rem;
     }
 
-    .brand-item {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 28px 0;
-      border-bottom: 1px solid var(--border);
-      text-decoration: none;
-      color: #fff;
-      transition: 0.45s ease;
-      gap: 18px;
+    .portfolio{
+      width:100%;
+      max-width:900px;
+      margin-top:18px;
+      border-top:1px solid var(--border);
     }
 
-    .brand-item:hover {
-      border-color: var(--primary);
-      padding-left: 14px;
+    .item{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:16px;
+      padding:22px 6px;
+      text-decoration:none;
+      color:#fff;
+      border-bottom:1px solid var(--border);
+      transition:0.25s ease;
+    }
+    .item:hover{
+      border-bottom-color:var(--primary);
+      padding-left:14px;
+    }
+    .name{
+      font-size:1.35rem;
+      font-weight:300;
+      letter-spacing:1px;
+    }
+    .desc{
+      font-size:0.78rem;
+      color:var(--muted2);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      text-align:right;
+      white-space:nowrap;
     }
 
-    .brand-name {
-      font-size: 1.45rem;
-      font-weight: 300;
-      letter-spacing: 2px;
+    footer{
+      padding:54px 18px 70px;
+      text-align:center;
+      font-size:0.74rem;
+      letter-spacing:2px;
+      color:rgba(255,255,255,0.35);
+      border-top:1px solid rgba(255,255,255,0.06);
+      background:#000;
+    }
+    footer a{
+      color:rgba(255,255,255,0.45);
+      text-decoration:none;
+      margin:0 12px;
+    }
+    footer a:hover{color:var(--primary)}
+    .foot-legal{
+      max-width:780px;
+      margin:26px auto 0;
+      line-height:2;
     }
 
-    .brand-desc {
-      font-size: 0.78rem;
-      color: var(--muted2);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    footer {
-      padding: 60px 20px 70px;
-      text-align: center;
-      font-size: 0.72rem;
-      letter-spacing: 2px;
-      color: rgba(255,255,255,0.35);
-      border-top: 1px solid rgba(255,255,255,0.06);
-      background: #000;
-    }
-
-    footer a {
-      color: rgba(255,255,255,0.45);
-      text-decoration: none;
-      margin: 0 14px;
-    }
-
-    footer a:hover { color: var(--primary); }
-
-    .legal-footer {
-      max-width: 760px;
-      margin: 34px auto 0;
-      line-height: 2;
-      color: rgba(255,255,255,0.35);
-    }
-
-    /* Mobile */
-    @media (max-width: 520px) {
-      h1 { letter-spacing: 9px; }
-      .me-legacy { letter-spacing: 4px; }
-      .brand-item { flex-direction: column; align-items: flex-start; }
+    @media (max-width:520px){
+      .tagline{letter-spacing:3px}
+      h1{letter-spacing:4px}
+      .item{flex-direction:column;align-items:flex-start}
+      .desc{text-align:left;white-space:normal}
     }
   </style>
 </head>
 
 <body>
+  <section class="hero">
+    <div class="logo-wrap">
+      <!-- IMPORTANT: Upload a clean logo PNG named exactly this -->
+      <img class="logo" src="murrays-empire-logo.png" alt="Murray’s Empire Logo">
+      <div class="tagline">Born into struggle. Built into legacy.</div>
+    </div>
 
-<section class="hero-section">
+    <h1>Murray’s Empire</h1>
 
-  <div class="me-logo-wrap">
-    <img src="murrays-empire-me-diamond.png" alt="Murray’s Empire Monogram" class="me-logo">
-    <div class="me-legacy">Born into struggle. Built into legacy.</div>
-  </div>
+    <div class="authority">
+      Privately held U.S. entity overseeing automated and educational digital brands across referral-based and online systems.
+      <div class="legal"><strong>Legal entity:</strong> Murrays Empire LLC.</div>
+    </div>
 
-  <h1>Murray’s Empire</h1>
+    <div class="portfolio" role="list">
+      <a class="item" href="https://brainhustle.store" target="_blank" rel="noopener" role="listitem">
+        <span class="name">BrainHustle™</span>
+        <span class="desc">Digital Systems</span>
+      </a>
 
-  <div class="authority">
-    Privately held U.S. entity overseeing automated and educational digital brands across referral-based and online systems.
-    <br><br>
-    <strong>Legal entity:</strong> Murrays Empire LLC.
-  </div>
+      <a class="item" href="https://crapsedge.store" target="_blank" rel="noopener" role="listitem">
+        <span class="name">CrapsEdge™</span>
+        <span class="desc">Educational Platform</span>
+      </a>
 
-  <div class="portfolio-list">
-    <a href="https://brainhustle.store" class="brand-item" target="_blank" rel="noopener">
-      <span class="brand-name">BrainHustle™</span>
-      <span class="brand-desc">Digital Systems</span>
-    </a>
+      <a class="item" href="https://omaharestoration.store" target="_blank" rel="noopener" role="listitem">
+        <span class="name">Omaha Restoration™</span>
+        <span class="desc">Automated Referral Network</span>
+      </a>
+    </div>
+  </section>
 
-    <a href="https://crapsedge.store" class="brand-item" target="_blank" rel="noopener">
-      <span class="brand-name">CrapsEdge™</span>
-      <span class="brand-desc">Educational Platform</span>
-    </a>
+  <footer>
+    <div>
+      <a href="terms.html">TERMS</a>
+      <a href="privacy.html">PRIVACY</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
 
-    <a href="https://omaharestoration.store" class="brand-item" target="_blank" rel="noopener">
-      <span class="brand-name">Omaha Restoration™</span>
-      <span class="brand-desc">Automated Referral Network</span>
-    </a>
-  </div>
-
-</section>
-
-<footer>
-  <div>
-    <a href="terms.html">TERMS</a>
-    <a href="privacy.html">PRIVACY</a>
-    <a href="contact.html">CONTACT</a>
-  </div>
-
-  <div class="legal-footer">
-    © 2026 <strong>MURRAYS EMPIRE LLC</strong>. ALL RIGHTS RESERVED.<br>
-    CONTENT IS INFORMATIONAL ONLY. NO FINANCIAL, LEGAL, OR INVESTMENT ADVICE PROVIDED.
-  </div>
-</footer>
-
+    <div class="foot-legal">
+      © 2026 <strong>MURRAYS EMPIRE LLC</strong>. ALL RIGHTS RESERVED.<br>
+      CONTENT IS INFORMATIONAL ONLY. NO FINANCIAL, LEGAL, OR INVESTMENT ADVICE PROVIDED.
+    </div>
+  </footer>
 </body>
 </html>
