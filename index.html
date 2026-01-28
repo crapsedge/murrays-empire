@@ -12,148 +12,237 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Murray’s Empire | Murrays Empire LLC</title>
-  <meta name="description" content="Murray’s Empire is the parent brand of Murrays Empire LLC, overseeing automated and educational digital brands across online systems." />
+  <meta name="google-site-verification" content="cCSyD8XgkEI9JMahtn2x6Pgr9Cx5uhG4n9sKnP8aU8k" />
+
+  <title>Murrays Empire LLC | Strategic Holding Company</title>
+
+  <meta name="description" content="Murrays Empire LLC is a private holding company managing a diversified portfolio of automated and educational brands, including BrainHustle™, CrapsEdge™, and Omaha Restoration™." />
+  <meta name="keywords" content="Murrays Empire LLC, Murray’s Empire, holding company, BrainHustle, CrapsEdge, Omaha Restoration, automated systems, educational brands, referral network, portfolio brands, digital asset management" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://murrayempires.com" />
+
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Murrays Empire LLC",
+    "alternateName": "Murray’s Empire",
+    "url": "https://murrayempires.com",
+    "description": "Private holding company managing automated and educational brand assets.",
+    "brand": [
+      { "@type": "Brand", "name": "BrainHustle™", "url": "https://brainhustle.store" },
+      { "@type": "Brand", "name": "CrapsEdge™", "url": "https://crapsedge.store" },
+      { "@type": "Brand", "name": "Omaha Restoration™", "url": "https://omaharestoration.store" }
+    ]
+  }
+  </script>
 
   <style>
     :root {
       --primary: #00ff66;
       --bg: #000;
-      --border: rgba(255, 255, 255, 0.08);
-      --muted: rgba(255, 255, 255, 0.65);
+      --border: #1a1a1a;
+      --muted: rgba(255,255,255,0.55);
+      --muted2: rgba(255,255,255,0.35);
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: var(--bg);
-      font-family: -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
-      color: #fff;
-      margin: 0;
+      background-color: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+      color: #ffffff;
+      line-height: 1.6;
+      overflow-x: hidden;
     }
 
-    .hero {
+    .hero-section {
       min-height: 100vh;
+      width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      position: relative;
+      background:
+        linear-gradient(rgba(0,0,0,0.86), rgba(0,0,0,0.86)),
+        url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2070');
+      background-size: cover;
+      background-position: center;
       text-align: center;
       padding: 60px 20px 40px;
-      background: radial-gradient(circle at 50% 20%, rgba(0, 255, 102, 0.1), transparent);
+    }
+
+    .emblem {
+      width: 72px;
+      height: 72px;
+      border: 1px solid var(--primary);
+      transform: rotate(45deg);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 28px;
+      box-shadow: 0 0 50px rgba(0, 255, 102, 0.18);
+    }
+
+    .emblem span {
+      transform: rotate(-45deg);
+      font-size: 1.35rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      color: var(--primary);
     }
 
     h1 {
-      font-size: clamp(2.2rem, 8vw, 3.5rem);
-      font-weight: 300;
-      letter-spacing: 8px;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 200;
+      letter-spacing: 14px;
       text-transform: uppercase;
-      margin: 0 0 10px;
+      margin-bottom: 10px;
     }
 
     .tagline {
-      font-size: 0.8rem;
-      letter-spacing: 4px;
-      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 7px;
       color: var(--primary);
-      margin: 0 0 25px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
     }
 
     .authority {
       max-width: 850px;
+      font-size: 0.92rem;
       color: var(--muted);
-      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      margin-bottom: 44px;
       line-height: 1.8;
-      margin: 0 auto 10px;
     }
 
-    .legal {
-      margin-top: 10px;
-      color: rgba(255, 255, 255, 0.75);
-      font-size: 0.9rem;
-    }
-
-    .logo-wrap {
-      display: flex;
-      justify-content: center;
-      margin: 40px 0 20px;
-    }
-
-    .legacy-mark {
-      width: min(320px, 85vw);
-      height: auto;
-      filter: drop-shadow(0 0 18px rgba(0, 255, 102, 0.2));
-      background: rgba(255, 255, 255, 0.03);
-      padding: 22px;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      backdrop-filter: blur(6px);
-      transition: transform 0.3s ease;
-    }
-
-    .legacy-mark:hover { transform: scale(1.02); }
-
-    .portfolio {
-      width: 100%;
+    .portfolio-list {
       max-width: 860px;
-      margin-top: 20px;
-      border-top: 1px solid var(--border);
+      width: 100%;
+      padding: 0 10px;
     }
 
-    .item {
+    .brand-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 20px 10px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
       text-decoration: none;
       color: #fff;
-      border-bottom: 1px solid var(--border);
-      transition: 0.3s;
+      transition: 0.45s ease;
+      gap: 16px;
     }
 
-    .item:hover { border-bottom-color: var(--primary); }
+    .brand-item:hover {
+      border-color: var(--primary);
+      padding-left: 14px;
+    }
 
-    .desc {
-      font-size: 0.75rem;
-      color: var(--muted);
-      letter-spacing: 1px;
+    .brand-name {
+      font-size: 1.45rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    .brand-desc {
+      font-size: 0.78rem;
+      color: var(--muted2);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: right;
+    }
+
+    footer {
+      padding: 56px 20px 70px;
+      text-align: center;
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      color: rgba(255,255,255,0.35);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      background: #000;
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      margin: 0 14px;
+      transition: 0.25s;
+    }
+    footer a:hover { color: var(--primary); }
+
+    .legal-footer {
+      max-width: 720px;
+      margin: 34px auto 0;
+      line-height: 2.05;
+      color: rgba(255,255,255,0.35);
+    }
+
+    .legal-entity {
+      color: rgba(255,255,255,0.55);
+    }
+
+    /* Mobile tweaks */
+    @media (max-width: 520px) {
+      h1 { letter-spacing: 10px; }
+      .tagline { letter-spacing: 5px; }
+      .brand-name { font-size: 1.2rem; white-space: normal; }
+      .brand-item { flex-direction: column; align-items: flex-start; }
+      .brand-desc { text-align: left; }
     }
   </style>
 </head>
+
 <body>
+  <section class="hero-section">
+    <div class="emblem" aria-hidden="true">
+      <span>ME</span>
+    </div>
 
-  <section class="hero">
     <h1>Murray’s Empire</h1>
-
-    <div class="tagline">Born into struggle. Built into legacy.</div>
+    <div class="tagline">Strategic Holding Company</div>
 
     <div class="authority">
-      Privately held U.S. entity overseeing automated and educational digital brands across referral-based and online systems.
-      <div class="legal"><strong>Legal entity:</strong> Murrays Empire LLC.</div>
+      Privately held U.S. holding entity overseeing automated and educational brand assets across digital systems and referral-based networks.
+      <span class="legal-entity"> Legal entity name: <strong>Murrays Empire LLC</strong>.</span>
     </div>
 
-    <div class="logo-wrap">
-      <img
-        src="murrays-empire-me-diamond.PNG"
-        alt="Murray’s Empire Legacy Mark"
-        class="legacy-mark"
-      />
-    </div>
+    <div class="portfolio-list" role="list">
+      <a href="https://brainhustle.store" class="brand-item" target="_blank" rel="noopener noreferrer" role="listitem">
+        <span class="brand-name">BrainHustle™</span>
+        <span class="brand-desc">Digital Systems</span>
+      </a>
 
-    <div class="portfolio">
-      <a class="item" href="https://brainhustle.store" target="_blank" rel="noopener noreferrer">
-        <span>BrainHustle™</span>
-        <span class="desc">DIGITAL SYSTEMS</span>
+      <a href="https://crapsedge.store" class="brand-item" target="_blank" rel="noopener noreferrer" role="listitem">
+        <span class="brand-name">CrapsEdge™</span>
+        <span class="brand-desc">Educational Platform</span>
       </a>
-      <a class="item" href="https://crapsedge.store" target="_blank" rel="noopener noreferrer">
-        <span>CrapsEdge™</span>
-        <span class="desc">EDUCATIONAL PLATFORM</span>
-      </a>
-      <a class="item" href="https://omaharestoration.store" target="_blank" rel="noopener noreferrer">
-        <span>Omaha Restoration™</span>
-        <span class="desc">AUTOMATED REFERRAL NETWORK</span>
+
+      <a href="https://omaharestoration.store" class="brand-item" target="_blank" rel="noopener noreferrer" role="listitem">
+        <span class="brand-name">Omaha Restoration™</span>
+        <span class="brand-desc">Automated Referral Network</span>
       </a>
     </div>
   </section>
 
+  <footer>
+    <div class="footer-links">
+      <a href="terms.html">TERMS</a>
+      <a href="privacy.html">PRIVACY</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+
+    <div class="legal-footer">
+      © 2026 <strong class="legal-entity">MURRAYS EMPIRE LLC</strong>. ALL RIGHTS RESERVED.<br>
+      A PRIVATE HOLDING ENTITY OVERSEEING DIVERSIFIED ASSETS.<br>
+      CONTENT IS FOR EDUCATIONAL PURPOSES ONLY.<br>
+      <span class="legal-entity">No financial, legal, medical, or investment advice is provided.</span>
+    </div>
+  </footer>
 </body>
 </html>
