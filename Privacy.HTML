@@ -1,35 +1,144 @@
-<div id="privacy-code">
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy – Murray’s Empire LLC</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Privacy Policy | Murrays Empire LLC</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+
   <style>
-    body { background:#000; color:#fff; font-family:Arial, sans-serif; line-height:1.6; padding:40px 20px; }
-    .container { max-width:800px; margin:auto; text-align:left; }
-    h1, h2 { color:#00ff66; }
-    .footer { margin-top:50px; color:gray; font-size:12px; border-top:1px solid #222; padding-top:20px; }
+    :root {
+      --bg-primary: #F8F6F2;
+      --bg-secondary: #FFFFFF;
+      --text-main: #111111;
+      --text-dim: #5A5A5A;
+      --accent: #1F3A5F;
+      --border: #E6E2DC;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      line-height: 1.8;
+      padding: 8vw 5vw;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* BREADCRUMB NAV */
+    .back-nav {
+      margin-bottom: 60px;
+    }
+
+    .back-nav a {
+      text-decoration: none;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -2px;
+      color: var(--accent);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      color: var(--text-dim);
+      margin-bottom: 60px;
+      display: block;
+    }
+
+    section {
+      margin-bottom: 50px;
+      padding: 40px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      font-size: 16px;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+
+    .footer-note {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      body { padding: 15vw 6vw; }
+      section { padding: 30px 20px; }
+    }
   </style>
 </head>
 <body>
+
   <div class="container">
-    <h1>Privacy Policy</h1>
-    <p>Last Updated: January 2026</p>
+    <nav class="back-nav">
+      <a href="index.html">← Back to Portfolio</a>
+    </nav>
 
-    <h2>1. Data Collection</h2>
-    <p>Murray’s Empire LLC collects information you provide directly to us (such as email addresses for BrainHustle™ memberships) and automated data via Google Analytics (G-3M5PKR5S27) to improve our user experience.</p>
+    <header>
+      <h1>Privacy Policy</h1>
+      <span class="last-updated">Effective: April 2026</span>
+    </header>
 
-    <h2>2. Use of Data</h2>
-    <p>We use your data to process payments, provide member access, and send updates regarding Murray’s Empire LLC sub-brands. We do not sell your personal data to third parties.</p>
+    <section>
+      <h2>1. Information Handling</h2>
+      <p>Murrays Empire LLC collects minimal data required to operate our online businesses. This includes email addresses for secure platform access and basic usage data via standard analytics to ensure system stability.</p>
+    </section>
 
-    <h2>3. Security</h2>
-    <p>We implement industry-standard security measures to protect your information. All financial transactions are handled via secure third-party processors.</p>
+    <section>
+      <h2>2. Usage & Disclosure</h2>
+      <p>Your data is used strictly for internal operations, such as processing member access and delivering requested updates. We do not sell, trade, or distribute personal information to third-party marketing entities.</p>
+    </section>
 
-    <div class="footer">
-      © 2026 Murray’s Empire LLC. Wholly owning CrapsEdge™, BrainHustle™, and Omaha Restoration.
+    <section>
+      <h2>3. Security Protocol</h2>
+      <p>We utilize industry-standard encryption and secure hosting environments to protect user data. All financial transactions are managed by verified third-party processors to ensure maximum payment security.</p>
+    </section>
+
+    <section>
+      <h2>4. Cookies & Tracking</h2>
+      <p>Our platforms use basic cookies to remember your preferences and provide a consistent user experience. You may disable these in your browser settings at any time without losing core site functionality.</p>
+    </section>
+
+    <div class="footer-note">
+      © 2026 Murrays Empire LLC. All Brands Managed Internally.
     </div>
   </div>
+
 </body>
 </html>
-</div>
