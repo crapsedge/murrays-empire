@@ -9,15 +9,13 @@
 
   <style>
     :root {
-      --bg-primary: #F8F6F2;
-      --bg-secondary: #FFFFFF;
-      --text-main: #111111;
-      --text-sub: #5A5A5A;
-      --brand-main: #1F3A5F;
-      --accent: #3A6EA5;
-      --border: #E6E2DC;
-      --btn-text: #FFFFFF;
-      --btn-hover: #162C47;
+      /* YOUR NEW COLOR SYSTEM */
+      --bg-primary: #C5B39A; /* Warm Sand / Light Brown */
+      --bg-secondary: #BAA88E; /* Slightly darker for cards */
+      --text-main: #000000; /* Pure Black for maximum authority */
+      --text-sub: #1A1A1A; /* Near Black for sub-text */
+      --border: rgba(0, 0, 0, 0.15);
+      --accent: #000000;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -40,11 +38,11 @@
 
     nav a {
       text-decoration: none;
-      color: var(--accent);
+      color: var(--text-main);
       font-size: 13px;
-      font-weight: 700;
+      font-weight: 900;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
     }
 
     header {
@@ -57,14 +55,14 @@
       font-weight: 900;
       letter-spacing: -4px;
       line-height: 0.9;
-      margin-bottom: 10px;
-      color: var(--brand-main);
+      margin-bottom: 20px;
+      color: var(--text-main);
       text-transform: uppercase;
     }
 
     .tagline {
       font-size: clamp(16px, 2vw, 22px);
-      font-weight: 400;
+      font-weight: 500;
       color: var(--text-sub);
       margin-bottom: 30px;
     }
@@ -72,28 +70,29 @@
     .about-box {
       max-width: 700px;
       margin-bottom: 60px;
+      border-left: 4px solid var(--text-main);
+      padding-left: 30px;
     }
 
     .about-box p {
-      font-size: 18px;
-      color: var(--text-sub);
-      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--text-main);
     }
 
     .what-we-do {
       margin-bottom: 80px;
       padding: 40px;
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      border-radius: 8px;
+      border: 2px solid var(--text-main);
     }
 
     .what-we-do h3 {
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--brand-main);
+      letter-spacing: 3px;
+      color: var(--text-main);
       margin-bottom: 25px;
+      font-weight: 900;
     }
 
     .bullet-list {
@@ -105,25 +104,16 @@
 
     .bullet-list li {
       font-size: 16px;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: var(--text-main);
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .bullet-list li::before {
-      content: '';
-      width: 8px;
-      height: 8px;
-      background-color: var(--accent);
-      border-radius: 50%;
-    }
-
+    /* BRAND GRID */
     .umbrella-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -132,52 +122,43 @@
       background: var(--bg-secondary);
       border: 1px solid var(--border);
       padding: 40px;
-      border-radius: 8px;
       text-decoration: none;
       color: var(--text-main);
-      transition: all 0.3s ease;
+      transition: 0.3s;
     }
 
     .holding:hover {
-      border-color: var(--accent);
-      transform: translateY(-4px);
+      background: var(--text-main);
+      color: var(--bg-primary);
     }
 
     .holding h2 {
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 32px;
+      font-weight: 900;
       margin-bottom: 15px;
-      color: var(--brand-main);
+      text-transform: uppercase;
+      letter-spacing: -1px;
     }
 
     .holding p {
       font-size: 15px;
-      color: var(--text-sub);
       margin-bottom: 25px;
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
     .btn-site {
-      display: inline-block;
-      padding: 12px 24px;
-      background-color: var(--brand-main);
-      color: var(--btn-text);
-      font-weight: 700;
+      font-weight: 900;
       font-size: 12px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      border-radius: 4px;
-      transition: background 0.2s;
-    }
-
-    .btn-site:hover {
-      background-color: var(--btn-hover);
+      letter-spacing: 2px;
+      border-bottom: 2px solid currentColor;
+      padding-bottom: 4px;
     }
 
     footer {
       max-width: 1200px;
       margin: 120px auto 40px auto;
-      border-top: 1px solid var(--border);
+      border-top: 2px solid var(--text-main);
       padding-top: 60px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -187,21 +168,17 @@
     .footer-col h4 {
       font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--brand-main);
+      letter-spacing: 3px;
       margin-bottom: 25px;
     }
 
     .footer-col p, .footer-col a {
       font-size: 14px;
-      color: var(--text-sub);
+      color: var(--text-main);
       text-decoration: none;
       display: block;
       margin-bottom: 12px;
-    }
-
-    .footer-col a:hover {
-      color: var(--accent);
+      font-weight: 500;
     }
 
     @media (max-width: 768px) {
@@ -213,13 +190,13 @@
 <body>
 
   <nav>
-    <a href="#brands">Holdings</a>
+    <a href="#brands">Portfolio</a>
     <a href="mailto:murraysempirellc@gmail.com">Contact</a>
   </nav>
 
   <header>
     <div class="corporate-title">MURRAYS EMPIRE</div>
-    <p class="tagline">Operating a diversified portfolio of online systems and brands.</p>
+    <p class="tagline">Private holdings and automated digital systems.</p>
     
     <div class="about-box">
       <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education. We build simple, scalable systems that solve specific problems for homeowners and entrepreneurs.</p>
@@ -228,8 +205,8 @@
     <div class="what-we-do">
       <h3>Core Focus</h3>
       <ul class="bullet-list">
-        <li>Software & Digital Tools</li>
-        <li>Direct Service Networks</li>
+        <li>Digital Infrastructure</li>
+        <li>Referral Logistics</li>
         <li>System Automation</li>
       </ul>
     </div>
@@ -240,19 +217,19 @@
     <div class="holding">
       <h2>BrainHustle™</h2>
       <p>A digital platform providing tools and systems for starting online businesses. We help users launch projects through clear, automated frameworks.</p>
-      <a href="https://brainhustle.store" class="btn-site">Visit Site →</a>
+      <span class="btn-site">Visit Asset ↗</span>
     </div>
 
     <div class="holding">
       <h2>Omaha Restoration™</h2>
       <p>A regional referral network connecting Omaha homeowners with professional restoration contractors for flood and water damage cleanup.</p>
-      <a href="https://omaharestoration.store" class="btn-site">Visit Site →</a>
+      <span class="btn-site">Visit Asset ↗</span>
     </div>
 
     <div class="holding">
       <h2>CrapsEdge™</h2>
       <p>An educational resource focused on casino strategy and mechanics. We provide statistical analysis and guides on gaming behavior.</p>
-      <a href="https://crapsedge.store" class="btn-site">Visit Site →</a>
+      <span class="btn-site">Visit Asset ↗</span>
     </div>
 
   </section>
@@ -266,8 +243,8 @@
     </div>
 
     <div class="footer-col">
-      <h4>Direct Contact</h4>
-      <a href="mailto:murraysempirellc@gmail.com" style="color: var(--accent); font-weight: 700;">murraysempirellc@gmail.com</a>
+      <h4>Contact</h4>
+      <a href="mailto:murraysempirellc@gmail.com">murraysempirellc@gmail.com</a>
     </div>
 
     <div class="footer-col">
