@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Murrays Empire LLC | Online Businesses & Systems</title>
+  <title>Murrays Empire LLC | Private Holdings</title>
   
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* YOUR NEW COLOR SYSTEM */
-      --bg-primary: #C5B39A; /* Warm Sand / Light Brown */
-      --bg-secondary: #BAA88E; /* Slightly darker for cards */
-      --text-main: #000000; /* Pure Black for maximum authority */
-      --text-sub: #1A1A1A; /* Near Black for sub-text */
-      --border: rgba(0, 0, 0, 0.15);
-      --accent: #000000;
+      /* TACTICAL COLOR SYSTEM */
+      --bg-primary: #080808;      /* Deepest Black */
+      --bg-secondary: #0f0f0f;    /* Muted Panel Black */
+      --text-main: #8a8a6b;       /* Muted Greenish-Brown (Olive) */
+      --text-bright: #a8a885;     /* Highlight Olive */
+      --border: #1e1e1a;          /* Dark Olive Border */
+      --accent: #8a8a6b;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,9 +38,9 @@
 
     nav a {
       text-decoration: none;
-      color: var(--text-main);
-      font-size: 13px;
-      font-weight: 900;
+      color: var(--text-bright);
+      font-size: 11px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
     }
@@ -53,44 +53,48 @@
     .corporate-title {
       font-size: clamp(40px, 8vw, 110px);
       font-weight: 900;
-      letter-spacing: -4px;
+      letter-spacing: -3px;
       line-height: 0.9;
       margin-bottom: 20px;
-      color: var(--text-main);
+      color: var(--text-bright);
       text-transform: uppercase;
     }
 
     .tagline {
-      font-size: clamp(16px, 2vw, 22px);
-      font-weight: 500;
-      color: var(--text-sub);
-      margin-bottom: 30px;
+      font-size: clamp(14px, 1.5vw, 18px);
+      font-weight: 400;
+      color: var(--text-main);
+      margin-bottom: 40px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      opacity: 0.8;
     }
 
     .about-box {
-      max-width: 700px;
+      max-width: 750px;
       margin-bottom: 60px;
-      border-left: 4px solid var(--text-main);
+      border-left: 1px solid var(--border);
       padding-left: 30px;
     }
 
     .about-box p {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 400;
       color: var(--text-main);
     }
 
     .what-we-do {
       margin-bottom: 80px;
-      padding: 40px;
-      border: 2px solid var(--text-main);
+      padding: 30px;
+      border: 1px solid var(--border);
+      background: var(--bg-secondary);
     }
 
     .what-we-do h3 {
-      font-size: 12px;
+      font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 3px;
-      color: var(--text-main);
+      letter-spacing: 4px;
+      color: var(--text-bright);
       margin-bottom: 25px;
       font-weight: 900;
     }
@@ -99,21 +103,22 @@
       list-style: none;
       display: flex;
       flex-wrap: wrap;
-      gap: 40px;
+      gap: 30px;
     }
 
     .bullet-list li {
-      font-size: 16px;
-      font-weight: 900;
+      font-size: 14px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
+      color: var(--text-bright);
     }
 
     /* BRAND GRID */
     .umbrella-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 40px;
+      gap: 30px;
       max-width: 1200px;
       margin: 0 auto;
     }
@@ -124,41 +129,44 @@
       padding: 40px;
       text-decoration: none;
       color: var(--text-main);
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     .holding:hover {
-      background: var(--text-main);
-      color: var(--bg-primary);
+      border-color: var(--text-bright);
+      background: #151512;
     }
 
     .holding h2 {
-      font-size: 32px;
+      font-size: 26px;
       font-weight: 900;
       margin-bottom: 15px;
       text-transform: uppercase;
-      letter-spacing: -1px;
+      letter-spacing: 1px;
+      color: var(--text-bright);
     }
 
     .holding p {
-      font-size: 15px;
+      font-size: 14px;
       margin-bottom: 25px;
-      line-height: 1.5;
+      line-height: 1.6;
+      opacity: 0.9;
     }
 
     .btn-site {
       font-weight: 900;
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      border-bottom: 2px solid currentColor;
+      color: var(--text-bright);
+      border-bottom: 1px solid var(--text-bright);
       padding-bottom: 4px;
     }
 
     footer {
       max-width: 1200px;
-      margin: 120px auto 40px auto;
-      border-top: 2px solid var(--text-main);
+      margin: 100px auto 40px auto;
+      border-top: 1px solid var(--border);
       padding-top: 60px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -166,14 +174,15 @@
     }
 
     .footer-col h4 {
-      font-size: 11px;
+      font-size: 10px;
       text-transform: uppercase;
       letter-spacing: 3px;
       margin-bottom: 25px;
+      color: var(--text-bright);
     }
 
     .footer-col p, .footer-col a {
-      font-size: 14px;
+      font-size: 13px;
       color: var(--text-main);
       text-decoration: none;
       display: block;
@@ -182,7 +191,7 @@
     }
 
     @media (max-width: 768px) {
-      .corporate-title { letter-spacing: -2px; }
+      .corporate-title { letter-spacing: -1px; }
       .bullet-list { flex-direction: column; gap: 15px; }
     }
   </style>
@@ -196,18 +205,18 @@
 
   <header>
     <div class="corporate-title">MURRAYS EMPIRE</div>
-    <p class="tagline">Private holdings and automated digital systems.</p>
+    <p class="tagline">Private holdings • Automated digital systems</p>
     
     <div class="about-box">
       <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education. We build simple, scalable systems that solve specific problems for homeowners and entrepreneurs.</p>
     </div>
 
     <div class="what-we-do">
-      <h3>Core Focus</h3>
+      <h3>CORE OPERATIONS</h3>
       <ul class="bullet-list">
-        <li>Digital Infrastructure</li>
-        <li>Referral Logistics</li>
-        <li>System Automation</li>
+        <li>SYSTEMS INFRASTRUCTURE</li>
+        <li>REFERRAL LOGISTICS</li>
+        <li>AUTOMATED NETWORKS</li>
       </ul>
     </div>
   </header>
@@ -217,19 +226,19 @@
     <div class="holding">
       <h2>BrainHustle™</h2>
       <p>A digital platform providing tools and systems for starting online businesses. We help users launch projects through clear, automated frameworks.</p>
-      <span class="btn-site">Visit Asset ↗</span>
+      <span class="btn-site">Access Platform ↗</span>
     </div>
 
     <div class="holding">
       <h2>Omaha Restoration™</h2>
       <p>A regional referral network connecting Omaha homeowners with professional restoration contractors for flood and water damage cleanup.</p>
-      <span class="btn-site">Visit Asset ↗</span>
+      <span class="btn-site">Access Network ↗</span>
     </div>
 
     <div class="holding">
       <h2>CrapsEdge™</h2>
       <p>An educational resource focused on casino strategy and mechanics. We provide statistical analysis and guides on gaming behavior.</p>
-      <span class="btn-site">Visit Asset ↗</span>
+      <span class="btn-site">Access Resource ↗</span>
     </div>
 
   </section>
@@ -243,12 +252,12 @@
     </div>
 
     <div class="footer-col">
-      <h4>Contact</h4>
+      <h4>Direct Reach</h4>
       <a href="mailto:murraysempirellc@gmail.com">murraysempirellc@gmail.com</a>
     </div>
 
     <div class="footer-col">
-      <h4>Governance</h4>
+      <h4>Compliance</h4>
       <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
     </div>
