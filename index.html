@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Contact | Murrays Empire LLC</title>
+  
+  <meta name="description" content="Murrays Empire LLC: A group of online businesses focused on simple tools, service networks, and educational platforms.">
+  <title>Murrays Empire LLC | Online Business Portfolio</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
@@ -13,133 +15,230 @@
       --bg-secondary: #FFFFFF;
       --text-main: #111111;
       --text-dim: #5A5A5A;
-      --accent: #1F3A5F;
       --border: #E6E2DC;
+      --accent: #1F3A5F;
     }
 
+    html { scroll-behavior: smooth; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       background-color: var(--bg-primary);
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
-      line-height: 1.8;
-      padding: 8vw 5vw;
+      line-height: 1.6;
+      padding: 5vw;
       -webkit-font-smoothing: antialiased;
     }
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
+    /* NAVIGATION - FIXED TO LEAD TO CONTACT.HTML */
+    nav {
+      max-width: 1200px;
+      margin: 0 auto 80px auto;
+      display: flex;
+      justify-content: flex-end;
+      gap: 40px;
     }
 
-    .back-nav {
-      margin-bottom: 60px;
-    }
-
-    .back-nav a {
+    nav a {
       text-decoration: none;
       color: var(--accent);
-      font-size: 12px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    h1 {
-      font-size: clamp(32px, 5vw, 60px);
+    header {
+      max-width: 1200px;
+      margin: 0 auto 100px auto;
+    }
+
+    .corporate-title {
+      font-size: clamp(40px, 8vw, 110px);
       font-weight: 900;
-      letter-spacing: -2px;
+      letter-spacing: -4px;
+      line-height: 0.9;
+      margin-bottom: 30px;
       color: var(--accent);
-      margin-bottom: 20px;
       text-transform: uppercase;
     }
 
-    .subtitle {
-      font-size: 18px;
+    .tagline {
+      font-size: clamp(18px, 2vw, 24px);
+      font-weight: 400;
       color: var(--text-dim);
+      margin-bottom: 40px;
+    }
+
+    .intro-block {
+      max-width: 750px;
       margin-bottom: 60px;
+    }
+
+    .intro-block p {
+      font-size: 20px;
+      color: var(--text-main);
+      margin-bottom: 15px;
+    }
+
+    .intro-block span {
+      font-size: 16px;
+      color: var(--text-dim);
       display: block;
     }
 
-    .contact-card {
-      padding: 60px 40px;
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .holding {
       background: var(--bg-secondary);
       border: 1px solid var(--border);
+      padding: 50px 40px;
+      text-decoration: none;
+      color: var(--text-main);
+      cursor: pointer;
+      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
       border-radius: 4px;
-      text-align: center;
     }
 
-    .contact-card h2 {
-      font-size: 14px;
+    .holding:hover {
+      border-color: var(--accent);
+      background: #fcfcfc;
+      transform: translateY(-8px);
+      box-shadow: 0 15px 35px rgba(31, 58, 95, 0.05);
+    }
+
+    .holding h2 {
+      font-size: 24px;
       font-weight: 800;
+      margin-bottom: 15px;
       color: var(--accent);
-      margin-bottom: 20px;
+    }
+
+    .holding p {
+      font-size: 15px;
+      color: var(--text-dim);
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .cta-link {
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 4px;
+      transition: border-color 0.2s;
+    }
+
+    .holding:hover .cta-link {
+      border-color: var(--accent);
+    }
+
+    footer {
+      max-width: 1200px;
+      margin: 150px auto 40px auto;
+      border-top: 1px solid var(--border);
+      padding-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 60px;
+    }
+
+    .footer-col h4 {
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 2px;
-    }
-
-    .email-link {
-      font-size: clamp(18px, 3vw, 28px);
-      font-weight: 700;
-      color: var(--text-main);
-      text-decoration: none;
-      border-bottom: 2px solid var(--accent);
-      padding-bottom: 5px;
-      transition: color 0.2s;
-    }
-
-    .email-link:hover {
+      margin-bottom: 25px;
       color: var(--accent);
     }
 
-    .location-note {
-      margin-top: 40px;
+    .footer-col p, .footer-col a {
       font-size: 14px;
       color: var(--text-dim);
-      text-transform: uppercase;
-      letter-spacing: 1px;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 12px;
     }
 
-    .footer-note {
-      margin-top: 100px;
-      padding-top: 40px;
-      border-top: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--text-dim);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      text-align: center;
-    }
+    .footer-col a:hover { color: var(--accent); }
 
     @media (max-width: 768px) {
-      body { padding: 15vw 6vw; }
-      .contact-card { padding: 40px 20px; }
+      .corporate-title { letter-spacing: -2px; }
+      body { padding: 12vw 6vw; }
+      header { margin-bottom: 60px; }
+      nav { margin-bottom: 40px; }
     }
   </style>
 </head>
 <body>
 
-  <div class="container">
-    <nav class="back-nav">
-      <a href="index.html">← Back to Portfolio</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
 
-    <header>
-      <h1>Get In Touch</h1>
-      <span class="subtitle">For inquiries regarding our brands, partnerships, or support, please reach out via our direct channel.</span>
-    </header>
+  <header>
+    <div class="corporate-title">MURRAYS EMPIRE</div>
+    <p class="tagline">A group of online businesses built under one company.</p>
+    
+    <div class="intro-block">
+      <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</p>
+      <span>We focus on simple tools, service networks, and educational platforms.</span>
+    </div>
+  </header>
 
-    <div class="contact-card">
-      <h2>Direct Correspondence</h2>
-      <a href="mailto:murraysempirellc@gmail.com" class="email-link">murraysempirellc@gmail.com</a>
-      <p class="location-note">Omaha, Nebraska</p>
+  <section class="brand-grid" id="brands">
+    
+    <a href="https://brainhustle.store" class="holding" target="_blank">
+      <h2>BrainHustle™</h2>
+      <p>A digital platform providing tools for starting online businesses. We help users launch projects through clear step-by-step systems.</p>
+      <span class="cta-link">Open BrainHustle →</span>
+    </a>
+
+    <a href="https://omaharestoration.store" class="holding" target="_blank">
+      <h2>Omaha Restoration™</h2>
+      <p>A local referral network in Omaha, Nebraska. We connect homeowners with professional contractors for water damage cleanup.</p>
+      <span class="cta-link">View Omaha Restoration →</span>
+    </a>
+
+    <a href="https://crapsedge.store" class="holding" target="_blank">
+      <h2>CrapsEdge™</h2>
+      <p>Educational content about casino strategy and mechanics. We provide guides and analysis on betting behavior and game systems.</p>
+      <span class="cta-link">Open CrapsEdge →</span>
+    </a>
+
+  </section>
+
+  <footer>
+    <div class="footer-col">
+      <h4>Online Business Portfolio</h4>
+      <p>Murrays Empire LLC</p>
+      <p>Omaha, Nebraska</p>
+      <p style="margin-top:20px; font-style:italic;">Operating multiple online brands across education, services, and digital tools.</p>
     </div>
 
-    <div class="footer-note">
-      © 2026 Murrays Empire LLC. Private Corporate Inquiries.
+    <div class="footer-col">
+      <h4>Direct Reach</h4>
+      <a href="contact.html">Contact Department</a>
+      <p>murraysempirellc@gmail.com</p>
     </div>
-  </div>
+
+    <div class="footer-col">
+      <h4>Governance</h4>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+  </footer>
 
 </body>
 </html>
