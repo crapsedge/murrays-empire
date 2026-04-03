@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  
-  <meta name="description" content="Murrays Empire LLC: A group of online businesses focused on simple tools, service networks, and educational platforms.">
-  <title>Murrays Empire LLC | Online Business Portfolio</title>
+  <title>Contact | Murrays Empire LLC</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* 1. FIXED COLOR SYSTEM */
       --bg-primary: #F8F6F2;
       --bg-secondary: #FFFFFF;
       --text-main: #111111;
       --text-dim: #5A5A5A;
-      --border: #E6E2DC;
       --accent: #1F3A5F;
+      --border: #E6E2DC;
     }
-
-    /* 15. SMOOTH SCROLLING */
-    html { scroll-behavior: smooth; }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -29,227 +23,123 @@
       background-color: var(--bg-primary);
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
-      line-height: 1.6;
-      padding: 5vw;
+      line-height: 1.8;
+      padding: 8vw 5vw;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* 6. STANDARD NAVIGATION */
-    nav {
-      max-width: 1200px;
-      margin: 0 auto 80px auto;
-      display: flex;
-      justify-content: flex-end;
-      gap: 40px;
-    }
-
-    nav a {
-      text-decoration: none;
-      color: var(--accent);
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    /* 9. INCREASED SPACING (TITLE TO TAGLINE) */
-    header {
-      max-width: 1200px;
-      margin: 0 auto 100px auto;
-    }
-
-    /* 4. HUMAN HEADLINE */
-    .corporate-title {
-      font-size: clamp(40px, 8vw, 110px);
-      font-weight: 900;
-      letter-spacing: -4px;
-      line-height: 0.9;
-      margin-bottom: 30px;
-      color: var(--accent);
-      text-transform: uppercase;
-    }
-
-    .tagline {
-      font-size: clamp(18px, 2vw, 24px);
-      font-weight: 400;
-      color: var(--text-dim);
-      margin-bottom: 40px;
-    }
-
-    /* 5. LINE OF CLARITY */
-    .intro-block {
-      max-width: 750px;
-      margin-bottom: 60px;
-    }
-
-    .intro-block p {
-      font-size: 20px;
-      color: var(--text-main);
-      margin-bottom: 15px;
-    }
-
-    .intro-block span {
-      font-size: 16px;
-      color: var(--text-dim);
-      display: block;
-    }
-
-    /* 9. INCREASED CARD SPACING */
-    .brand-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
+    .container {
+      max-width: 800px;
       margin: 0 auto;
     }
 
-    .holding {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      padding: 50px 40px;
+    .back-nav {
+      margin-bottom: 60px;
+    }
+
+    .back-nav a {
       text-decoration: none;
-      color: var(--text-main);
-      /* 10. CURSOR POINTER */
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-      border-radius: 4px;
-    }
-
-    /* 7. LIGHT HOVER BACKGROUND */
-    .holding:hover {
-      border-color: var(--accent);
-      background: #fcfcfc;
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(31, 58, 95, 0.05);
-    }
-
-    .holding h2 {
-      font-size: 24px;
-      font-weight: 800;
-      margin-bottom: 15px;
       color: var(--accent);
-    }
-
-    /* 2. TEXT CONTRAST IMPROVEMENT */
-    .holding p {
-      font-size: 15px;
-      color: var(--text-dim);
-      margin-bottom: 30px;
-      line-height: 1.6;
-    }
-
-    /* 8. ACTIONABLE CTA */
-    .cta-link {
-      font-weight: 800;
       font-size: 12px;
+      font-weight: 800;
       text-transform: uppercase;
       letter-spacing: 1px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 5vw, 60px);
+      font-weight: 900;
+      letter-spacing: -2px;
       color: var(--accent);
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 4px;
-      transition: border-color 0.2s;
+      margin-bottom: 20px;
+      text-transform: uppercase;
     }
 
-    .holding:hover .cta-link {
-      border-color: var(--accent);
+    .subtitle {
+      font-size: 18px;
+      color: var(--text-dim);
+      margin-bottom: 60px;
+      display: block;
     }
 
-    footer {
-      max-width: 1200px;
-      margin: 150px auto 40px auto;
-      border-top: 1px solid var(--border);
-      padding-top: 60px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 60px;
+    .contact-card {
+      padding: 60px 40px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-align: center;
     }
 
-    .footer-col h4 {
-      font-size: 11px;
+    .contact-card h2 {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 20px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 25px;
+    }
+
+    .email-link {
+      font-size: clamp(18px, 3vw, 28px);
+      font-weight: 700;
+      color: var(--text-main);
+      text-decoration: none;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+      transition: color 0.2s;
+    }
+
+    .email-link:hover {
       color: var(--accent);
     }
 
-    .footer-col p, .footer-col a {
+    .location-note {
+      margin-top: 40px;
       font-size: 14px;
       color: var(--text-dim);
-      text-decoration: none;
-      display: block;
-      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .footer-col a:hover { color: var(--accent); }
+    .footer-note {
+      margin-top: 100px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      font-size: 12px;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-align: center;
+    }
 
-    /* 16. MOBILE SPACING PASS */
     @media (max-width: 768px) {
-      .corporate-title { letter-spacing: -2px; }
-      body { padding: 12vw 6vw; }
-      header { margin-bottom: 60px; }
-      nav { margin-bottom: 40px; }
+      body { padding: 15vw 6vw; }
+      .contact-card { padding: 40px 20px; }
     }
   </style>
 </head>
 <body>
 
-  <nav>
-    <a href="#brands">Home</a>
-    <a href="about.html">About</a>
-    <a href="mailto:murraysempirellc@gmail.com">Contact</a>
-  </nav>
+  <div class="container">
+    <nav class="back-nav">
+      <a href="index.html">← Back to Portfolio</a>
+    </nav>
 
-  <header>
-    <div class="corporate-title">MURRAYS EMPIRE</div>
-    <p class="tagline">A group of online businesses built under one company.</p>
-    
-    <div class="intro-block">
-      <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</p>
-      <span>We focus on simple tools, service networks, and educational platforms.</span>
-    </div>
-  </header>
+    <header>
+      <h1>Get In Touch</h1>
+      <span class="subtitle">For inquiries regarding our brands, partnerships, or support, please reach out via our direct channel.</span>
+    </header>
 
-  <section class="brand-grid" id="brands">
-    
-    <a href="https://brainhustle.store" class="holding" target="_blank">
-      <h2>BrainHustle™</h2>
-      <p>A digital platform providing tools for starting online businesses. We help users launch projects through clear step-by-step systems.</p>
-      <span class="cta-link">Open BrainHustle →</span>
-    </a>
-
-    <a href="https://omaharestoration.store" class="holding" target="_blank">
-      <h2>Omaha Restoration™</h2>
-      <p>A local referral network in Omaha, Nebraska. We connect homeowners with professional contractors for water damage cleanup.</p>
-      <span class="cta-link">View Omaha Restoration →</span>
-    </a>
-
-    <a href="https://crapsedge.store" class="holding" target="_blank">
-      <h2>CrapsEdge™</h2>
-      <p>Educational content about casino strategy and mechanics. We provide guides and analysis on betting behavior and game systems.</p>
-      <span class="cta-link">Open CrapsEdge →</span>
-    </a>
-
-  </section>
-
-  <footer>
-    <div class="footer-col">
-      <h4>Online Business Portfolio</h4>
-      <p>Murrays Empire LLC</p>
-      <p>Omaha, Nebraska</p>
-      <p style="margin-top:20px; font-style:italic;">Operating multiple online brands across education, services, and digital tools.</p>
+    <div class="contact-card">
+      <h2>Direct Correspondence</h2>
+      <a href="mailto:murraysempirellc@gmail.com" class="email-link">murraysempirellc@gmail.com</a>
+      <p class="location-note">Omaha, Nebraska</p>
     </div>
 
-    <div class="footer-col">
-      <h4>Direct Reach</h4>
-      <a href="mailto:murraysempirellc@gmail.com">murraysempirellc@gmail.com</a>
+    <div class="footer-note">
+      © 2026 Murrays Empire LLC. Private Corporate Inquiries.
     </div>
-
-    <div class="footer-col">
-      <h4>Governance</h4>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-    </div>
-  </footer>
+  </div>
 
 </body>
 </html>
