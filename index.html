@@ -1,4 +1,4 @@
-l<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0RVT3YHKW"></script>
@@ -12,220 +12,235 @@ l<!DOCTYPE html>
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Murrays Empire LLC | Private Strategic Holdings</title>
+  <meta name="google-site-verification" content="cCSyD8XgkEI9JMahtn2x6Pgr9Cx5uhG4n9sKnP8aU8k" />
   
+  <title>Murrays Empire LLC | Private Strategic Holdings</title>
+  <meta name="description" content="Murrays Empire LLC is a private holding company managing a diversified portfolio of automated digital assets and referral networks." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://murrayempires.com" />
+
   <style>
     :root {
+      /* High-End Color Palette */
       --gold: #c5a059;
-      --bg: #050505; /* Rich Black */
-      --border: #1a1a1a;
-      --text-muted: #555;
+      --gold-faded: rgba(197, 160, 89, 0.1);
+      --bg: #0a0a0a; /* Deep Charcoal (Softer than pure black) */
+      --border: #1e1e1e;
+      --text-muted: #888888;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { margin: 0; padding: 0; box-sizing: border-box; cursor: default; }
 
     body {
       background-color: var(--bg);
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       color: #ffffff;
+      line-height: 1.8;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* GLOBAL MENU TRIGGER */
-    .menu-btn {
-      position: fixed;
-      top: 40px;
-      right: 40px;
-      z-index: 1000;
-      color: var(--gold);
-      font-size: 10px;
-      letter-spacing: 5px;
-      text-transform: uppercase;
-      cursor: pointer;
-      border: 1px solid var(--gold);
-      padding: 10px 20px;
-      background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
-    }
-
-    /* SIDE NAV */
-    .side-nav {
-      position: fixed;
-      top: 0;
-      right: -320px;
-      width: 320px;
-      height: 100%;
-      background: #000;
-      z-index: 999;
-      transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
-      padding: 120px 40px;
-      border-left: 1px solid var(--border);
-    }
-    .side-nav.active { right: 0; }
-    .side-nav a {
-      display: block;
-      color: #fff;
-      text-decoration: none;
-      font-size: 11px;
-      letter-spacing: 4px;
-      text-transform: uppercase;
-      padding: 25px 0;
-      border-bottom: 1px solid var(--border);
-      transition: 0.3s;
-    }
-    .side-nav a:hover { color: var(--gold); padding-left: 10px; }
-
-    /* HERO SECTION */
-    .hero {
-      height: 100vh;
+    /* Luxury Glassmorphism Hero */
+    .hero-section {
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background: radial-gradient(circle at center, #111 0%, #050505 100%);
+      background: radial-gradient(circle at center, #151515 0%, #0a0a0a 100%);
       text-align: center;
-      padding: 20px;
+      padding: 60px 20px;
     }
 
+    /* Minimalist Logo Emblem */
     .emblem {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
       border: 0.5px solid var(--gold);
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-bottom: 50px;
-      position: relative;
+      margin-bottom: 40px;
+      transition: 0.5s ease;
     }
-    .emblem span { font-size: 14px; color: var(--gold); letter-spacing: 5px; font-weight: 300; margin-left: 5px; }
+    .emblem span {
+      font-size: 0.9rem;
+      color: var(--gold);
+      letter-spacing: 4px;
+      font-weight: 300;
+      margin-left: 4px; /* Centering the letter spacing */
+    }
+    .emblem:hover {
+      background: var(--gold);
+    }
+    .emblem:hover span {
+      color: #000;
+    }
 
     h1 {
-      font-size: clamp(20px, 6vw, 40px);
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
       font-weight: 200;
-      letter-spacing: 22px;
+      letter-spacing: 18px;
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       color: #fff;
-      margin-left: 22px; /* Offset for letter spacing centering */
     }
 
     .tagline {
-      font-size: 9px;
-      letter-spacing: 12px;
+      font-size: 0.7rem;
+      letter-spacing: 8px;
       color: var(--gold);
       text-transform: uppercase;
-      margin-bottom: 80px;
-      font-weight: 600;
-      opacity: 0.7;
+      margin-bottom: 60px;
+      font-weight: 500;
+      opacity: 0.8;
     }
 
-    /* HOLDINGS LIST */
-    .holdings {
+    /* Portfolio Grid - Modern Wealth Style */
+    .portfolio-container {
+      max-width: 800px;
       width: 100%;
-      max-width: 700px;
+      margin-top: 20px;
     }
 
-    .label {
-      font-size: 8px;
-      letter-spacing: 6px;
+    .section-label {
+      font-size: 0.6rem;
+      letter-spacing: 4px;
       color: var(--text-muted);
       text-transform: uppercase;
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       display: block;
     }
 
-    .holding-item {
+    .brand-item {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 35px 10px;
+      padding: 30px 20px;
       border-top: 1px solid var(--border);
       text-decoration: none;
-      transition: 0.5s;
-    }
-    .holding-item:last-child { border-bottom: 1px solid var(--border); }
-    .holding-item:hover { background: rgba(197, 160, 89, 0.05); padding: 35px 30px; }
-
-    .h-name { font-size: 14px; letter-spacing: 4px; font-weight: 300; color: #fff; text-transform: uppercase; }
-    .h-type { font-size: 9px; color: var(--gold); letter-spacing: 2px; text-transform: uppercase; border: 0.5px solid var(--gold); padding: 5px 15px; border-radius: 30px; }
-
-    /* FOOTER */
-    footer {
-      padding: 100px 20px;
-      text-align: center;
-      background: #000;
-      border-top: 1px solid var(--border);
+      color: #fff;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      cursor: pointer;
     }
 
-    .legal {
-      font-size: 9px;
-      color: #333;
-      letter-spacing: 2px;
-      line-height: 2.5;
+    .brand-item:last-child {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand-item:hover {
+      background: var(--gold-faded);
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
+    .brand-name { 
+      font-size: 1.1rem; 
+      letter-spacing: 3px; 
+      font-weight: 300;
       text-transform: uppercase;
+    }
+
+    .brand-desc { 
+      font-size: 0.6rem; 
+      color: var(--gold); 
+      text-transform: uppercase; 
+      letter-spacing: 2px;
+      border: 1px solid var(--gold);
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    /* Refined Footer */
+    footer {
+      padding: 80px 20px;
+      background: #080808;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    .footer-links {
+      margin-bottom: 40px;
+    }
+
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 3px;
+      margin: 0 20px;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    .legal-text {
+      font-size: 0.6rem;
+      color: #444;
+      letter-spacing: 1px;
+      line-height: 2.2;
       max-width: 600px;
       margin: 0 auto;
+      text-transform: uppercase;
     }
 
-    @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-    .hero > * { animation: fadeIn 1.5s ease forwards; }
+    /* Simple Copy/Paste Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-section > * {
+      animation: fadeIn 1.2s ease forwards;
+    }
   </style>
 </head>
 <body>
 
-  <div class="menu-btn" onclick="toggleMenu()">Archive</div>
-
-  <nav class="side-nav" id="sideNav">
-    <a href="terms.html">Legal Framework</a>
-    <a href="privacy.html">Data Privacy</a>
-    <a href="contact.html">Executive Contact</a>
-    <a href="https://omaharestoration.store">Omaha Restoration™</a>
-    <a href="https://crapsedge.store">CrapsEdge™</a>
-    <a href="https://brainhustle.store">BrainHustle™</a>
-  </nav>
-
-  <section class="hero">
+  <section class="hero-section">
     <div class="emblem"><span>ME</span></div>
+    
     <h1>Murrays Empire LLC</h1>
     <p class="tagline">Strategic Holding Company</p>
 
-    <div class="holdings">
-      <span class="label">Primary Strategic Assets</span>
+    <div class="portfolio-container">
+      <span class="section-label">Current Strategic Holdings</span>
       
-      <a href="https://brainhustle.store" class="holding-item">
-        <span class="h-name">BrainHustle™</span>
-        <span class="h-type">Digital Systems</span>
+      <a href="https://brainhustle.store" class="brand-item" target="_blank">
+        <span class="brand-name">BrainHustle™</span>
+        <span class="brand-desc">Digital Systems</span>
       </a>
 
-      <a href="https://crapsedge.store" class="holding-item">
-        <span class="h-name">CrapsEdge™</span>
-        <span class="h-type">Education</span>
+      <a href="https://crapsedge.store" class="brand-item" target="_blank">
+        <span class="brand-name">CrapsEdge™</span>
+        <span class="brand-desc">Education</span>
       </a>
 
-      <a href="https://omaharestoration.store" class="holding-item">
-        <span class="h-name">Omaha Restoration™</span>
-        <span class="h-type">Referral Network</span>
+      <a href="https://omaharestoration.store" class="brand-item" target="_blank">
+        <span class="brand-name">Omaha Restoration™</span>
+        <span class="brand-desc">Referral Network</span>
       </a>
     </div>
   </section>
 
   <footer>
-    <div class="legal">
+    <div class="footer-links">
+      <a href="terms.html">TERMS</a>
+      <a href="privacy.html">PRIVACY</a>
+      <a href="contact.html">CONTACT</a>
+    </div>
+    
+    <div class="legal-text">
       © 2026 MURRAYS EMPIRE LLC. ALL RIGHTS RESERVED.<br>
-      A PRIVATE NEBRASKA SINGLE-MEMBER ENTITY.<br>
-      PRINCIPAL AGENT: 200 S 21ST ST STE 400A, LINCOLN, NE 68510.<br>
-      STRICTLY PRIVATE HOLDINGS. NO PUBLIC SOLICITATION.
+      A PRIVATE HOLDING ENTITY OVERSEEING DIVERSIFIED ASSETS.<br>
+      REGISTERED AGENT: 200 S 21ST ST STE 400A, LINCOLN, NE 68510.<br>
+      NO FINANCIAL, LEGAL, OR INVESTMENT ADVICE IS PROVIDED.
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('sideNav').classList.toggle('active');
-      const btn = document.querySelector('.menu-btn');
-      btn.textContent = btn.textContent === 'Archive' ? 'Close' : 'Archive';
-    }
-  </script>
-
 </body>
 </html>
+
+
+This my murrays empire
