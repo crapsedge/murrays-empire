@@ -1,246 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0RVT3YHKW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Y0RVT3YHKW');
-    gtag('config', 'G-W9E0GVP27T');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="google-site-verification" content="cCSyD8XgkEI9JMahtn2x6Pgr9Cx5uhG4n9sKnP8aU8k" />
+  <title>Murrays Empire LLC | Strategic Holdings</title>
   
-  <title>Murrays Empire LLC | Private Strategic Holdings</title>
-  <meta name="description" content="Murrays Empire LLC is a private holding company managing a diversified portfolio of automated digital assets and referral networks." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://murrayempires.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* High-End Color Palette */
-      --gold: #c5a059;
-      --gold-faded: rgba(197, 160, 89, 0.1);
-      --bg: #0a0a0a; /* Deep Charcoal (Softer than pure black) */
-      --border: #1e1e1e;
-      --text-muted: #888888;
+      --electric-blue: #0066ff;
+      --soft-gray: #f5f7f9;
+      --text-main: #1a1f36;
+      --text-sub: #4f566b;
+      --border: #e3e8ee;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; cursor: default; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background-color: var(--bg);
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      color: #ffffff;
-      line-height: 1.8;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
+      background-color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 8vw;
     }
 
-    /* Luxury Glassmorphism Hero */
-    .hero-section {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: radial-gradient(circle at center, #151515 0%, #0a0a0a 100%);
-      text-align: center;
-      padding: 60px 20px;
+    /* THE "STRIPE-STYLE" HEADER */
+    header {
+      max-width: 1100px;
+      margin: 0 auto 120px auto;
     }
 
-    /* Minimalist Logo Emblem */
-    .emblem {
-      width: 60px;
-      height: 60px;
-      border: 0.5px solid var(--gold);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 40px;
-      transition: 0.5s ease;
-    }
-    .emblem span {
-      font-size: 0.9rem;
-      color: var(--gold);
-      letter-spacing: 4px;
-      font-weight: 300;
-      margin-left: 4px; /* Centering the letter spacing */
-    }
-    .emblem:hover {
-      background: var(--gold);
-    }
-    .emblem:hover span {
-      color: #000;
+    .corp-logo {
+      font-weight: 900;
+      font-size: clamp(40px, 10vw, 120px);
+      letter-spacing: -5px;
+      line-height: 0.85;
+      margin-bottom: 30px;
+      color: var(--text-main);
     }
 
-    h1 {
-      font-size: clamp(1.5rem, 5vw, 2.5rem);
-      font-weight: 200;
-      letter-spacing: 18px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-      color: #fff;
+    .corp-logo span {
+      color: var(--electric-blue);
     }
 
-    .tagline {
-      font-size: 0.7rem;
-      letter-spacing: 8px;
-      color: var(--gold);
-      text-transform: uppercase;
-      margin-bottom: 60px;
+    .mission {
+      font-size: clamp(20px, 2.5vw, 28px);
       font-weight: 500;
-      opacity: 0.8;
-    }
-
-    /* Portfolio Grid - Modern Wealth Style */
-    .portfolio-container {
+      color: var(--text-sub);
       max-width: 800px;
-      width: 100%;
-      margin-top: 20px;
+      letter-spacing: -0.5px;
     }
 
-    .section-label {
-      font-size: 0.6rem;
-      letter-spacing: 4px;
-      color: var(--text-muted);
-      text-transform: uppercase;
+    /* THE MODERN ASSET GRID */
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .asset-box {
+      text-decoration: none;
+      color: inherit;
+      padding: 40px;
+      background: var(--soft-gray);
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .asset-box:hover {
+      background: #fff;
+      border-color: var(--electric-blue);
+      box-shadow: 0 20px 40px rgba(0, 102, 255, 0.1);
+      transform: translateY(-8px);
+    }
+
+    .asset-box h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .asset-box p {
+      font-size: 15px;
+      color: var(--text-sub);
       margin-bottom: 20px;
-      display: block;
     }
 
-    .brand-item {
+    .asset-tag {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--electric-blue);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* CLEAN FOOTER */
+    footer {
+      max-width: 1100px;
+      margin: 150px auto 0 auto;
+      border-top: 1px solid var(--border);
+      padding-top: 50px;
       display: flex;
       justify-content: space-between;
-      align-items: center;
-      padding: 30px 20px;
-      border-top: 1px solid var(--border);
-      text-decoration: none;
-      color: #fff;
-      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      cursor: pointer;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 40px;
     }
 
-    .brand-item:last-child {
-      border-bottom: 1px solid var(--border);
-    }
-
-    .brand-item:hover {
-      background: var(--gold-faded);
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-
-    .brand-name { 
-      font-size: 1.1rem; 
-      letter-spacing: 3px; 
-      font-weight: 300;
+    .footer-section h4 {
+      font-size: 13px;
       text-transform: uppercase;
-    }
-
-    .brand-desc { 
-      font-size: 0.6rem; 
-      color: var(--gold); 
-      text-transform: uppercase; 
-      letter-spacing: 2px;
-      border: 1px solid var(--gold);
-      padding: 4px 12px;
-      border-radius: 20px;
-    }
-
-    /* Refined Footer */
-    footer {
-      padding: 80px 20px;
-      background: #080808;
-      border-top: 1px solid var(--border);
-      text-align: center;
-    }
-
-    .footer-links {
-      margin-bottom: 40px;
-    }
-
-    .footer-links a {
-      color: var(--text-muted);
-      text-decoration: none;
-      font-size: 0.65rem;
-      letter-spacing: 3px;
-      margin: 0 20px;
-      transition: 0.3s;
-    }
-
-    .footer-links a:hover {
-      color: var(--gold);
-    }
-
-    .legal-text {
-      font-size: 0.6rem;
-      color: #444;
       letter-spacing: 1px;
-      line-height: 2.2;
-      max-width: 600px;
-      margin: 0 auto;
-      text-transform: uppercase;
+      margin-bottom: 20px;
+      color: var(--text-main);
     }
 
-    /* Simple Copy/Paste Animation */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    .footer-section p, .footer-section a {
+      font-size: 14px;
+      color: var(--text-sub);
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
     }
-    .hero-section > * {
-      animation: fadeIn 1.2s ease forwards;
+
+    @media (max-width: 768px) {
+      body { padding: 15vw 8vw; }
+      .corp-logo { letter-spacing: -2px; }
+      header { margin-bottom: 80px; }
     }
   </style>
 </head>
 <body>
 
-  <section class="hero-section">
-    <div class="emblem"><span>ME</span></div>
+  <header>
+    <div class="corp-logo">MURRAYS<br><span>EMPIRE</span></div>
+    <p class="mission">
+      The private holding firm driving global innovation through automated digital assets, regional logistics, and strategic education.
+    </p>
+  </header>
+
+  <section class="asset-grid">
     
-    <h1>Murrays Empire LLC</h1>
-    <p class="tagline">Strategic Holding Company</p>
+    <a href="https://brainhustle.store" class="asset-box">
+      <div class="asset-tag">Infrastructure</div>
+      <h2>BrainHustle™</h2>
+      <p>Automating the path to digital revenue through scalable systems and expert frameworks.</p>
+    </a>
 
-    <div class="portfolio-container">
-      <span class="section-label">Current Strategic Holdings</span>
-      
-      <a href="https://brainhustle.store" class="brand-item" target="_blank">
-        <span class="brand-name">BrainHustle™</span>
-        <span class="brand-desc">Digital Systems</span>
-      </a>
+    <a href="https://omaharestoration.store" class="asset-box">
+      <div class="asset-tag">Logistics</div>
+      <h2>Omaha Restoration™</h2>
+      <p>A premier referral architecture connecting regional demand with high-performance field experts.</p>
+    </a>
 
-      <a href="https://crapsedge.store" class="brand-item" target="_blank">
-        <span class="brand-name">CrapsEdge™</span>
-        <span class="brand-desc">Education</span>
-      </a>
+    <a href="https://crapsedge.store" class="asset-box">
+      <div class="asset-tag">Strategy</div>
+      <h2>CrapsEdge™</h2>
+      <p>Specialized behavioral research and probability analysis for modern gaming mechanics.</p>
+    </a>
 
-      <a href="https://omaharestoration.store" class="brand-item" target="_blank">
-        <span class="brand-name">Omaha Restoration™</span>
-        <span class="brand-desc">Referral Network</span>
-      </a>
-    </div>
   </section>
 
   <footer>
-    <div class="footer-links">
-      <a href="terms.html">TERMS</a>
-      <a href="privacy.html">PRIVACY</a>
-      <a href="contact.html">CONTACT</a>
+    <div class="footer-section">
+      <h4>Murrays Empire LLC</h4>
+      <p>Lincoln, Nebraska</p>
+      <p>© 2026 Governance</p>
     </div>
-    
-    <div class="legal-text">
-      © 2026 MURRAYS EMPIRE LLC. ALL RIGHTS RESERVED.<br>
-      A PRIVATE HOLDING ENTITY OVERSEEING DIVERSIFIED ASSETS.<br>
-      REGISTERED AGENT: 200 S 21ST ST STE 400A, LINCOLN, NE 68510.<br>
-      NO FINANCIAL, LEGAL, OR INVESTMENT ADVICE IS PROVIDED.
+
+    <div class="footer-section">
+      <h4>Legal</h4>
+      <a href="terms.html">Terms of Use</a>
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+
+    <div class="footer-section" style="max-width: 400px;">
+      <h4>Corporate Notice</h4>
+      <p>Murrays Empire LLC operates as a private strategic holding entity. We do not provide public financial, legal, or investment consultations.</p>
     </div>
   </footer>
 
 </body>
 </html>
-
-
-This my murrays empire
