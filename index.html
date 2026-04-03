@@ -2,20 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Murrays Empire LLC | Private Holdings</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Murrays Empire LLC | Online Businesses & Systems</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      /* TACTICAL COLOR SYSTEM */
-      --bg-primary: #080808;      /* Deepest Black */
-      --bg-secondary: #0f0f0f;    /* Muted Panel Black */
-      --text-main: #8a8a6b;       /* Muted Greenish-Brown (Olive) */
-      --text-bright: #a8a885;     /* Highlight Olive */
-      --border: #1e1e1a;          /* Dark Olive Border */
-      --accent: #8a8a6b;
+      --bg-primary: #080808;
+      --bg-secondary: #0f0f0f;
+      --text-main: #8a8a6b;
+      --text-bright: #a8a885;
+      --border: #1e1e1a;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,8 +24,10 @@
       color: var(--text-main);
       line-height: 1.6;
       padding: 5vw;
+      -webkit-font-smoothing: antialiased;
     }
 
+    /* 3. SIMPLE NAVIGATION (5-7 ITEMS MAX) */
     nav {
       max-width: 1200px;
       margin: 0 auto 60px auto;
@@ -43,8 +43,12 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 2px;
+      transition: 0.2s;
     }
 
+    nav a:hover { opacity: 0.6; }
+
+    /* 1. CLEAR PURPOSE IN 3 SECONDS */
     header {
       max-width: 1200px;
       margin: 0 auto 80px auto;
@@ -67,55 +71,24 @@
       margin-bottom: 40px;
       text-transform: uppercase;
       letter-spacing: 3px;
-      opacity: 0.8;
     }
 
-    .about-box {
+    /* 6. CLEAR "WHAT THIS COMPANY IS" SECTION */
+    .intro-block {
       max-width: 750px;
       margin-bottom: 60px;
       border-left: 1px solid var(--border);
       padding-left: 30px;
     }
 
-    .about-box p {
+    .intro-block p {
       font-size: 18px;
-      font-weight: 400;
       color: var(--text-main);
+      margin-bottom: 20px;
     }
 
-    .what-we-do {
-      margin-bottom: 80px;
-      padding: 30px;
-      border: 1px solid var(--border);
-      background: var(--bg-secondary);
-    }
-
-    .what-we-do h3 {
-      font-size: 10px;
-      text-transform: uppercase;
-      letter-spacing: 4px;
-      color: var(--text-bright);
-      margin-bottom: 25px;
-      font-weight: 900;
-    }
-
-    .bullet-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
-
-    .bullet-list li {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--text-bright);
-    }
-
-    /* BRAND GRID */
-    .umbrella-grid {
+    /* 19. LOGICAL FLOW: HOMEPAGE -> BRANDS */
+    .brand-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
@@ -129,12 +102,13 @@
       padding: 40px;
       text-decoration: none;
       color: var(--text-main);
-      transition: 0.3s ease;
+      transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 
+    /* 17. SUBTLE HOVER STATE */
     .holding:hover {
       border-color: var(--text-bright);
-      background: #151512;
+      transform: translateY(-5px);
     }
 
     .holding h2 {
@@ -142,18 +116,17 @@
       font-weight: 900;
       margin-bottom: 15px;
       text-transform: uppercase;
-      letter-spacing: 1px;
       color: var(--text-bright);
     }
 
+    /* 34. WHAT EACH BRAND DOES (SPECIFIC) */
     .holding p {
       font-size: 14px;
       margin-bottom: 25px;
       line-height: 1.6;
-      opacity: 0.9;
     }
 
-    .btn-site {
+    .cta-link {
       font-weight: 900;
       font-size: 11px;
       text-transform: uppercase;
@@ -163,6 +136,7 @@
       padding-bottom: 4px;
     }
 
+    /* 8. LEGAL + 10. CONTACT FOOTER */
     footer {
       max-width: 1200px;
       margin: 100px auto 40px auto;
@@ -187,77 +161,70 @@
       text-decoration: none;
       display: block;
       margin-bottom: 12px;
-      font-weight: 500;
     }
+
+    .footer-col a:hover { color: var(--text-bright); }
 
     @media (max-width: 768px) {
       .corporate-title { letter-spacing: -1px; }
-      .bullet-list { flex-direction: column; gap: 15px; }
+      body { padding: 10vw 5vw; }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#brands">Portfolio</a>
+    <a href="index.html">Holdings</a>
+    <a href="about.html">Philosophy</a>
     <a href="mailto:murraysempirellc@gmail.com">Contact</a>
   </nav>
 
   <header>
     <div class="corporate-title">MURRAYS EMPIRE</div>
-    <p class="tagline">Private holdings • Automated digital systems</p>
+    <p class="tagline">Online businesses and systems built under one company.</p>
     
-    <div class="about-box">
-      <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education. We build simple, scalable systems that solve specific problems for homeowners and entrepreneurs.</p>
-    </div>
-
-    <div class="what-we-do">
-      <h3>CORE OPERATIONS</h3>
-      <ul class="bullet-list">
-        <li>SYSTEMS INFRASTRUCTURE</li>
-        <li>REFERRAL LOGISTICS</li>
-        <li>AUTOMATED NETWORKS</li>
-      </ul>
+    <div class="intro-block">
+      <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</p>
     </div>
   </header>
 
-  <section class="umbrella-grid" id="brands">
+  <section class="brand-grid" id="brands">
     
-    <div class="holding">
+    <a href="https://brainhustle.store" class="holding" target="_blank">
       <h2>BrainHustle™</h2>
-      <p>A digital platform providing tools and systems for starting online businesses. We help users launch projects through clear, automated frameworks.</p>
-      <span class="btn-site">Access Platform ↗</span>
-    </div>
+      <p>Tools and systems for starting online businesses. We help users launch projects through clear, automated digital frameworks.</p>
+      <span class="cta-link">Visit Site →</span>
+    </a>
 
-    <div class="holding">
+    <a href="https://omaharestoration.store" class="holding" target="_blank">
       <h2>Omaha Restoration™</h2>
-      <p>A regional referral network connecting Omaha homeowners with professional restoration contractors for flood and water damage cleanup.</p>
-      <span class="btn-site">Access Network ↗</span>
-    </div>
+      <p>A local referral network in Omaha. We connect homeowners with professional contractors for flood and water damage cleanup.</p>
+      <span class="cta-link">Visit Site →</span>
+    </a>
 
-    <div class="holding">
+    <a href="https://crapsedge.store" class="holding" target="_blank">
       <h2>CrapsEdge™</h2>
-      <p>An educational resource focused on casino strategy and mechanics. We provide statistical analysis and guides on gaming behavior.</p>
-      <span class="btn-site">Access Resource ↗</span>
-    </div>
+      <p>Educational content about casino strategy. We provide guides and analysis on betting behavior and gaming mechanics.</p>
+      <span class="cta-link">Visit Site →</span>
+    </a>
 
   </section>
 
   <footer>
     <div class="footer-col">
-      <h4>Organization</h4>
+      <h4>Company</h4>
       <p>Murrays Empire LLC</p>
       <p>Private Portfolio</p>
       <p>Omaha, Nebraska</p>
     </div>
 
     <div class="footer-col">
-      <h4>Direct Reach</h4>
+      <h4>Direct Contact</h4>
       <a href="mailto:murraysempirellc@gmail.com">murraysempirellc@gmail.com</a>
     </div>
 
     <div class="footer-col">
-      <h4>Compliance</h4>
+      <h4>Governance</h4>
       <a href="terms.html">Terms</a>
       <a href="privacy.html">Privacy</a>
     </div>
