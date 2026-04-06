@@ -17,6 +17,7 @@
       --text-dim: #5A5A5A;
       --border: #E6E2DC;
       --accent: #1F3A5F;
+      --gold: #D4AF37; /* Premium Gold Accent */
     }
 
     html { scroll-behavior: smooth; }
@@ -27,31 +28,48 @@
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
       line-height: 1.6;
-      padding: 5vw;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* NAVIGATION - FIXED TO LEAD TO CONTACT.HTML */
+    /* NAVIGATION */
     nav {
       max-width: 1200px;
-      margin: 0 auto 80px auto;
+      margin: 0 auto;
+      padding: 30px 5vw;
       display: flex;
       justify-content: flex-end;
       gap: 40px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
     }
 
     nav a {
       text-decoration: none;
-      color: var(--accent);
+      color: #FFFFFF;
       font-size: 13px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    header {
-      max-width: 1200px;
-      margin: 0 auto 100px auto;
+    /* HERO SECTION WITH YOUR IMAGE */
+    .hero-section {
+      height: 80vh;
+      min-height: 500px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero-bg.png');
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 5vw;
+      margin-bottom: 80px;
     }
 
     .corporate-title {
@@ -59,9 +77,23 @@
       font-weight: 900;
       letter-spacing: -4px;
       line-height: 0.9;
-      margin-bottom: 30px;
-      color: var(--accent);
+      margin-bottom: 20px;
       text-transform: uppercase;
+    }
+
+    .hero-quote {
+      font-size: 24px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 2px;
+      margin-top: 10px;
+      text-transform: uppercase;
+    }
+
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5vw;
     }
 
     .tagline {
@@ -92,8 +124,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
+      margin-bottom: 100px;
     }
 
     .holding {
@@ -144,10 +175,8 @@
     }
 
     footer {
-      max-width: 1200px;
-      margin: 150px auto 40px auto;
       border-top: 1px solid var(--border);
-      padding-top: 60px;
+      padding: 60px 0;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 60px;
@@ -172,10 +201,9 @@
     .footer-col a:hover { color: var(--accent); }
 
     @media (max-width: 768px) {
+      .hero-section { height: 60vh; }
       .corporate-title { letter-spacing: -2px; }
-      body { padding: 12vw 6vw; }
-      header { margin-bottom: 60px; }
-      nav { margin-bottom: 40px; }
+      .hero-quote { font-size: 16px; }
     }
   </style>
 </head>
@@ -187,58 +215,62 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <header>
+  <header class="hero-section">
     <div class="corporate-title">MURRAYS EMPIRE</div>
+    <div class="hero-quote">Born into Struggle. Built into Legacy.</div>
+  </header>
+
+  <div class="main-container">
     <p class="tagline">A group of online businesses built under one company.</p>
     
     <div class="intro-block">
       <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</p>
       <span>We focus on simple tools, service networks, and educational platforms.</span>
     </div>
-  </header>
 
-  <section class="brand-grid" id="brands">
-    
-    <a href="https://brainhustle.store" class="holding" target="_blank">
-      <h2>BrainHustle™</h2>
-      <p>A digital platform providing tools for starting online businesses. We help users launch projects through clear step-by-step systems.</p>
-      <span class="cta-link">Open BrainHustle →</span>
-    </a>
+    <section class="brand-grid" id="brands">
+      
+      <a href="https://brainhustle.store" class="holding" target="_blank">
+        <h2>BrainHustle™</h2>
+        <p>A digital platform providing tools for starting online businesses. We help users launch projects through clear step-by-step systems.</p>
+        <span class="cta-link">Open BrainHustle →</span>
+      </a>
 
-    <a href="https://omaharestoration.store" class="holding" target="_blank">
-      <h2>Omaha Restoration™</h2>
-      <p>A local referral network in Omaha, Nebraska. We connect homeowners with professional contractors for water damage cleanup.</p>
-      <span class="cta-link">View Omaha Restoration →</span>
-    </a>
+      <a href="https://omaharestoration.store" class="holding" target="_blank">
+        <h2>Omaha Restoration™</h2>
+        <p>A local referral network in Omaha, Nebraska. We connect homeowners with professional contractors for water damage cleanup.</p>
+        <span class="cta-link">View Omaha Restoration →</span>
+      </a>
 
-    <a href="https://crapsedge.store" class="holding" target="_blank">
-      <h2>CrapsEdge™</h2>
-      <p>Educational content about casino strategy and mechanics. We provide guides and analysis on betting behavior and game systems.</p>
-      <span class="cta-link">Open CrapsEdge →</span>
-    </a>
+      <a href="https://crapsedge.store" class="holding" target="_blank">
+        <h2>CrapsEdge™</h2>
+        <p>Educational content about casino strategy and mechanics. We provide guides and analysis on betting behavior and game systems.</p>
+        <span class="cta-link">Open CrapsEdge →</span>
+      </a>
 
-  </section>
+    </section>
 
-  <footer>
-    <div class="footer-col">
-      <h4>Online Business Portfolio</h4>
-      <p>Murrays Empire LLC</p>
-      <p>Omaha, Nebraska</p>
-      <p style="margin-top:20px; font-style:italic;">Operating multiple online brands across education, services, and digital tools.</p>
-    </div>
+    <footer>
+      <div class="footer-col">
+        <h4>Online Business Portfolio</h4>
+        <p>Murrays Empire LLC</p>
+        <p>Omaha, Nebraska</p>
+        <p style="margin-top:20px; font-style:italic;">Operating multiple online brands across education, services, and digital tools.</p>
+      </div>
 
-    <div class="footer-col">
-      <h4>Direct Reach</h4>
-      <a href="contact.html">Contact Department</a>
-      <p>murraysempirellc@gmail.com</p>
-    </div>
+      <div class="footer-col">
+        <h4>Direct Reach</h4>
+        <a href="contact.html">Contact Department</a>
+        <p>murraysempirellc@gmail.com</p>
+      </div>
 
-    <div class="footer-col">
-      <h4>Governance</h4>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
-    </div>
-  </footer>
+      <div class="footer-col">
+        <h4>Governance</h4>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+    </footer>
+  </div>
 
 </body>
 </html>
