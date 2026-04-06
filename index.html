@@ -3,201 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Murrays Empire LLC: A private holding company overseeing a portfolio of digital tools, service networks, and educational platforms.">
-  <title>Murrays Empire LLC | Corporate Portfolio</title>
   
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+  <meta name="description" content="Murrays Empire LLC: A group of online businesses focused on simple tools, service networks, and educational platforms.">
+  <title>Murrays Empire LLC | Online Business Portfolio</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg-primary: #F5F3EF;      /* Soft architectural white */
-      --bg-secondary: #FFFFFF;    /* Paper white */
-      --text-main: #1A1A1A;       /* Deep charcoal */
-      --text-dim: #666666;        /* Muted slate */
-      --border: #E4DED6;          /* Fine-line divider */
-      --accent: #2F3E46;          /* The Deep Slate you chose */
-      --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      --bg-primary: #F5F3EF;      /* soft warm white */
+      --bg-secondary: #FFFFFF;    /* pure white cards */
+      --text-main: #111111;       /* strong black */
+      --text-dim: #6A6A6A;        /* muted gray */
+      --border: #E4DED6;          /* soft divider */
+      --accent: #2F3E46;          /* deep slate (professional) */
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       background-color: var(--bg-primary);
       font-family: 'Inter', sans-serif;
       color: var(--text-main);
-      line-height: 1.7;
+      line-height: 1.6;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
     }
 
-    /* PREMIUM NAVIGATION */
+    /* NAVIGATION */
     nav {
+      max-width: 100%;
+      padding: 25px 5vw;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
       position: absolute;
       top: 0;
-      width: 100%;
-      padding: 35px 5vw;
-      display: flex;
-      justify-content: flex-end;
-      gap: 40px;
-      z-index: 100;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
     }
 
     nav a {
       text-decoration: none;
       color: #FFFFFF;
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 2.5px;
-      opacity: 0.85;
-      transition: var(--transition);
+      letter-spacing: 2px;
     }
 
-    nav a:hover { opacity: 1; letter-spacing: 3px; }
-
-    /* ELITE HERO SECTION */
+    /* HERO SECTION - FIXED POSITIONING */
     .hero-section {
-      position: relative;
       width: 100%;
       height: 90vh; 
-      min-height: 650px;
-      background-color: #000;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
+      background: #000 url('IMG_3963.png');
+      background-size: contain; /* Shows the WHOLE image without cropping */
+      background-repeat: no-repeat;
+      background-position: center top;
+      margin-bottom: 40px;
     }
 
-    .hero-image {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0) 40%, rgba(0,0,0,0.6) 100%), 
-                        url('IMG_3963.png');
-      background-size: cover;
-      background-position: bottom center; /* Keeps 'You' visible on the ledge */
-      z-index: 1;
-    }
-
-    /* MAIN CONTENT WRAPPER */
-    .content-wrapper {
-      max-width: 1250px;
+    .main-container {
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 0 6vw;
-      position: relative;
-    }
-
-    /* INTRO BLOCK */
-    .intro-section {
-      padding: 100px 0 80px 0;
+      padding: 0 5vw;
     }
 
     .intro-block {
-      max-width: 850px;
-      border-left: 1px solid var(--accent); /* Elegant thinner line */
-      padding: 10px 0 10px 40px;
+      max-width: 800px;
+      margin-bottom: 60px;
+      border-left: 4px solid var(--accent);
+      padding-left: 30px;
     }
 
-    .intro-block h1 {
-      font-size: clamp(28px, 4vw, 42px);
-      font-weight: 700;
-      color: var(--accent);
-      line-height: 1.2;
-      margin-bottom: 20px;
-      letter-spacing: -0.02em;
-    }
-
+    /* RESTORED YOUR ORIGINAL WORDING STYLE */
     .intro-block p {
-      font-size: 18px;
-      color: var(--text-dim);
-      font-weight: 400;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 10px;
     }
 
-    /* BRAND CARDS GRID */
+    .intro-block span {
+      font-size: 16px;
+      color: var(--text-dim);
+      display: block;
+    }
+
     .brand-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
-      padding-bottom: 120px;
+      margin-bottom: 100px;
     }
 
     .holding {
       background: var(--bg-secondary);
       border: 1px solid var(--border);
-      padding: 60px 45px;
+      padding: 50px 40px;
       text-decoration: none;
-      color: inherit;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: var(--transition);
-      position: relative;
+      color: var(--text-main);
+      transition: all 0.3s ease;
+      border-radius: 4px;
     }
 
     .holding:hover {
-      transform: translateY(-12px);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.05);
       border-color: var(--accent);
-      box-shadow: 0 40px 80px rgba(47, 62, 70, 0.08);
     }
 
     .holding h2 {
       font-size: 24px;
       font-weight: 800;
+      margin-bottom: 15px;
       color: var(--accent);
-      margin-bottom: 20px;
-      letter-spacing: -0.5px;
-      text-transform: uppercase;
     }
 
     .holding p {
       font-size: 15px;
       color: var(--text-dim);
-      margin-bottom: 40px;
-      flex-grow: 1;
-    }
-
-    .cta-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      margin-bottom: 30px;
     }
 
     .cta-link {
-      font-weight: 700;
-      font-size: 10px;
+      font-weight: 800;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 2px;
+      letter-spacing: 1px;
       color: var(--accent);
+      border-bottom: 2px solid var(--border);
       padding-bottom: 4px;
-      border-bottom: 1px solid var(--border);
-      transition: var(--transition);
     }
 
-    .holding:hover .cta-link {
-      border-bottom-color: var(--accent);
-      padding-right: 10px;
-    }
-
-    /* CORPORATE FOOTER */
     footer {
       border-top: 1px solid var(--border);
-      padding: 100px 0 60px 0;
+      padding: 80px 0 40px 0;
       display: grid;
-      grid-template-columns: 2fr 1fr 1fr;
-      gap: 80px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 60px;
     }
 
     .footer-col h4 {
       font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
       color: var(--accent);
-      font-weight: 800;
     }
 
     .footer-col p, .footer-col a {
@@ -206,29 +160,11 @@
       text-decoration: none;
       margin-bottom: 12px;
       display: block;
-      transition: color 0.2s;
     }
 
-    .footer-col a:hover { color: var(--accent); }
-
-    .company-desc {
-      max-width: 300px;
-      line-height: 1.8;
-      font-style: italic;
-      opacity: 0.8;
-    }
-
-    /* MOBILE OPTIMIZATION */
-    @media (max-width: 900px) {
-      footer { grid-template-columns: 1fr; gap: 50px; }
-      .hero-section { height: 75vh; }
-      nav { justify-content: center; background: rgba(0,0,0,0.2); padding: 20px; }
-    }
-
-    @media (max-width: 600px) {
-      .intro-block { padding-left: 20px; }
-      .brand-grid { grid-template-columns: 1fr; }
-      .holding { padding: 40px 30px; }
+    @media (max-width: 768px) {
+      .hero-section { height: 70vh; background-size: cover; }
+      .intro-block p { font-size: 20px; }
     }
   </style>
 </head>
@@ -240,71 +176,55 @@
     <a href="contact.html">Contact</a>
   </nav>
 
-  <header class="hero-section">
-    <div class="hero-image"></div>
-  </header>
+  <header class="hero-section"></header>
 
-  <main class="content-wrapper">
+  <div class="main-container">
     
-    <section class="intro-section">
-      <div class="intro-block">
-        <h1>Private Management of Specialized Digital Ventures.</h1>
-        <p>Murrays Empire LLC operates a refined portfolio of online brands, scaling systems across educational strategy, local service logistics, and digital business tools.</p>
-      </div>
-    </section>
+    <div class="intro-block">
+      <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</p>
+      <span>We focus on simple tools, service networks, and educational platforms.</span>
+    </div>
 
     <section class="brand-grid">
       <a href="https://brainhustle.store" class="holding" target="_blank">
-        <div>
-          <h2>BrainHustle™</h2>
-          <p>A comprehensive ecosystem providing the structural systems and digital tools necessary for the modern entrepreneur to launch and scale online ventures.</p>
-        </div>
-        <div class="cta-container">
-          <span class="cta-link">Access Systems</span>
-        </div>
+        <h2>BrainHustle™</h2>
+        <p>A digital platform providing tools for starting online businesses. We help users launch projects through clear step-by-step systems.</p>
+        <span class="cta-link">Open BrainHustle →</span>
       </a>
 
       <a href="https://omaharestoration.store" class="holding" target="_blank">
-        <div>
-          <h2>Omaha Restoration™</h2>
-          <p>A high-efficiency local referral network connecting Nebraska residents with elite restoration professionals for immediate property recovery.</p>
-        </div>
-        <div class="cta-container">
-          <span class="cta-link">View Network</span>
-        </div>
+        <h2>Omaha Restoration™</h2>
+        <p>A local referral network in Omaha, Nebraska. We connect homeowners with professional contractors for water damage cleanup.</p>
+        <span class="cta-link">View Omaha Restoration →</span>
       </a>
 
       <a href="https://crapsedge.store" class="holding" target="_blank">
-        <div>
-          <h2>CrapsEdge™</h2>
-          <p>An educational authority focused on the behavioral analysis and strategic mechanics of casino gaming through expert digital guides.</p>
-        </div>
-        <div class="cta-container">
-          <span class="cta-link">Explore Strategy</span>
-        </div>
+        <h2>CrapsEdge™</h2>
+        <p>Educational content about casino strategy and mechanics. We provide guides and analysis on betting behavior and game systems.</p>
+        <span class="cta-link">Open CrapsEdge →</span>
       </a>
     </section>
 
     <footer>
       <div class="footer-col">
-        <h4>Murrays Empire LLC</h4>
+        <h4>Portfolio</h4>
+        <p>Murrays Empire LLC</p>
         <p>Omaha, Nebraska</p>
-        <p class="company-desc">A single-member holding company dedicated to building automated, scalable, and value-driven digital assets.</p>
       </div>
 
       <div class="footer-col">
-        <h4>Inquiries</h4>
-        <p>murraysempirellc@gmail.com</p>
+        <h4>Direct Reach</h4>
         <a href="contact.html">Contact Department</a>
+        <p>murraysempirellc@gmail.com</p>
       </div>
 
       <div class="footer-col">
         <h4>Governance</h4>
-        <a href="terms.html">Terms of Service</a>
-        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
       </div>
     </footer>
-  </main>
+  </div>
 
 </body>
 </html>
