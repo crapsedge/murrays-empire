@@ -11,30 +11,32 @@
 
   <style>
     :root {
-      --bg-primary: #F8F6F2;
-      --bg-secondary: #FFFFFF;
-      --text-main: #111111;
-      --text-dim: #5A5A5A;
-      --border: #E6E2DC;
-      --accent: #1F3A5F;
+      /* PREMIUM COLOR PALETTE */
+      --bg-deep: #050505;        /* Near black for depth */
+      --bg-card: #0f0f0f;        /* Slightly lighter for cards */
+      --text-gold: #d4af37;      /* Classic Gold */
+      --text-white: #ffffff;     /* Pure white for readability */
+      --text-gray: #888888;      /* Dimmed text for descriptions */
+      --border-gold: #3d341c;    /* Muted gold for borders */
+      --accent-glow: rgba(212, 175, 55, 0.1);
     }
 
     html { scroll-behavior: smooth; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background-color: var(--bg-primary);
+      background-color: var(--bg-deep);
       font-family: 'Inter', sans-serif;
-      color: var(--text-main);
+      color: var(--text-white);
       line-height: 1.6;
       padding: 5vw;
       -webkit-font-smoothing: antialiased;
     }
 
-    /* NAVIGATION - FIXED TO LEAD TO CONTACT.HTML */
+    /* NAVIGATION */
     nav {
       max-width: 1200px;
-      margin: 0 auto 80px auto;
+      margin: 0 auto 60px auto;
       display: flex;
       justify-content: flex-end;
       gap: 40px;
@@ -42,140 +44,146 @@
 
     nav a {
       text-decoration: none;
-      color: var(--accent);
-      font-size: 13px;
+      color: var(--text-gold);
+      font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
+      transition: opacity 0.3s;
     }
 
+    nav a:hover { opacity: 0.7; }
+
+    /* LOGO / HERO IMAGE */
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto 60px auto;
+      text-align: center;
+    }
+
+    .hero-image {
+      width: 100%;
+      max-width: 500px; 
+      border: 1px solid var(--border-gold);
+      border-radius: 2px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+    }
+
+    /* HEADER */
     header {
       max-width: 1200px;
       margin: 0 auto 100px auto;
+      text-align: center;
     }
 
     .corporate-title {
-      font-size: clamp(40px, 8vw, 110px);
+      font-size: clamp(35px, 7vw, 90px);
       font-weight: 900;
-      letter-spacing: -4px;
-      line-height: 0.9;
-      margin-bottom: 30px;
-      color: var(--accent);
+      letter-spacing: -2px;
+      line-height: 1;
+      margin-bottom: 20px;
+      color: var(--text-gold);
       text-transform: uppercase;
     }
 
     .tagline {
-      font-size: clamp(18px, 2vw, 24px);
+      font-size: clamp(16px, 1.8vw, 20px);
       font-weight: 400;
-      color: var(--text-dim);
-      margin-bottom: 40px;
+      color: var(--text-gray);
+      max-width: 600px;
+      margin: 0 auto;
+      letter-spacing: 1px;
     }
 
-    .intro-block {
-      max-width: 750px;
-      margin-bottom: 60px;
-    }
-
-    .intro-block p {
-      font-size: 20px;
-      color: var(--text-main);
-      margin-bottom: 15px;
-    }
-
-    .intro-block span {
-      font-size: 16px;
-      color: var(--text-dim);
-      display: block;
-    }
-
+    /* BRAND GRID */
     .brand-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
+      gap: 30px;
       max-width: 1200px;
       margin: 0 auto;
     }
 
     .holding {
-      background: var(--bg-secondary);
-      border: 1px solid var(--border);
-      padding: 50px 40px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-gold);
+      padding: 60px 40px;
       text-decoration: none;
-      color: var(--text-main);
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-      border-radius: 4px;
+      color: var(--text-white);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .holding:hover {
-      border-color: var(--accent);
-      background: #fcfcfc;
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(31, 58, 95, 0.05);
+      background: #161616;
+      border-color: var(--text-gold);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px var(--accent-glow);
     }
 
     .holding h2 {
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 800;
-      margin-bottom: 15px;
-      color: var(--accent);
+      margin-bottom: 20px;
+      color: var(--text-gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
     .holding p {
       font-size: 15px;
-      color: var(--text-dim);
-      margin-bottom: 30px;
-      line-height: 1.6;
+      color: var(--text-gray);
+      margin-bottom: 40px;
+      line-height: 1.8;
     }
 
     .cta-link {
-      font-weight: 800;
-      font-size: 12px;
+      font-weight: 700;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: var(--accent);
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 4px;
-      transition: border-color 0.2s;
+      letter-spacing: 2px;
+      color: var(--text-gold);
+      border-bottom: 1px solid var(--border-gold);
+      padding-bottom: 5px;
+      align-self: flex-start;
     }
 
-    .holding:hover .cta-link {
-      border-color: var(--accent);
-    }
-
+    /* FOOTER */
     footer {
       max-width: 1200px;
       margin: 150px auto 40px auto;
-      border-top: 1px solid var(--border);
+      border-top: 1px solid var(--border-gold);
       padding-top: 60px;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 60px;
     }
 
     .footer-col h4 {
-      font-size: 11px;
+      font-size: 10px;
       text-transform: uppercase;
-      letter-spacing: 2px;
-      margin-bottom: 25px;
-      color: var(--accent);
+      letter-spacing: 3px;
+      margin-bottom: 30px;
+      color: var(--text-gold);
     }
 
     .footer-col p, .footer-col a {
-      font-size: 14px;
-      color: var(--text-dim);
+      font-size: 13px;
+      color: var(--text-gray);
       text-decoration: none;
       display: block;
-      margin-bottom: 12px;
+      margin-bottom: 15px;
     }
 
-    .footer-col a:hover { color: var(--accent); }
+    .footer-col a:hover { color: var(--text-gold); }
 
     @media (max-width: 768px) {
-      .corporate-title { letter-spacing: -2px; }
-      body { padding: 12vw 6vw; }
+      body { padding: 15vw 8vw; }
       header { margin-bottom: 60px; }
-      nav { margin-bottom: 40px; }
+      .brand-grid { gap: 20px; }
     }
   </style>
 </head>
@@ -187,56 +195,60 @@
     <a href="contact.html">Contact</a>
   </nav>
 
+  <div class="hero-container">
+    <img src="image.png" alt="Legacy" class="hero-image">
+  </div>
+
   <header>
     <div class="corporate-title">MURRAYS EMPIRE</div>
-    <p class="tagline">A group of online businesses built under one company.</p>
-    
-    <div class="intro-block">
-      <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</p>
-      <span>We focus on simple tools, service networks, and educational platforms.</span>
-    </div>
+    <p class="tagline">A Private Group of Managed Online Interests.</p>
   </header>
 
   <section class="brand-grid" id="brands">
     
     <a href="https://brainhustle.store" class="holding" target="_blank">
-      <h2>BrainHustle™</h2>
-      <p>A digital platform providing tools for starting online businesses. We help users launch projects through clear step-by-step systems.</p>
-      <span class="cta-link">Open BrainHustle →</span>
+      <div>
+        <h2>BrainHustle™</h2>
+        <p>Scalable digital systems and educational resources designed for modern entrepreneurship.</p>
+      </div>
+      <span class="cta-link">Explore Brand →</span>
     </a>
 
     <a href="https://omaharestoration.store" class="holding" target="_blank">
-      <h2>Omaha Restoration™</h2>
-      <p>A local referral network in Omaha, Nebraska. We connect homeowners with professional contractors for water damage cleanup.</p>
-      <span class="cta-link">View Omaha Restoration →</span>
+      <div>
+        <h2>Omaha Restoration™</h2>
+        <p>Premium restoration referral network connecting Nebraska residents with elite service providers.</p>
+      </div>
+      <span class="cta-link">View Network →</span>
     </a>
 
     <a href="https://crapsedge.store" class="holding" target="_blank">
-      <h2>CrapsEdge™</h2>
-      <p>Educational content about casino strategy and mechanics. We provide guides and analysis on betting behavior and game systems.</p>
-      <span class="cta-link">Open CrapsEdge →</span>
+      <div>
+        <h2>CrapsEdge™</h2>
+        <p>Advanced educational guides on casino mechanics, betting systems, and behavioral analysis.</p>
+      </div>
+      <span class="cta-link">View Insights →</span>
     </a>
 
   </section>
 
   <footer>
     <div class="footer-col">
-      <h4>Online Business Portfolio</h4>
-      <p>Murrays Empire LLC</p>
+      <h4>Murrays Empire LLC</h4>
+      <p>Digital Asset Management</p>
       <p>Omaha, Nebraska</p>
-      <p style="margin-top:20px; font-style:italic;">Operating multiple online brands across education, services, and digital tools.</p>
     </div>
 
     <div class="footer-col">
-      <h4>Direct Reach</h4>
-      <a href="contact.html">Contact Department</a>
+      <h4>Operations</h4>
+      <a href="contact.html">Inquiries</a>
       <p>murraysempirellc@gmail.com</p>
     </div>
 
     <div class="footer-col">
-      <h4>Governance</h4>
-      <a href="terms.html">Terms</a>
-      <a href="privacy.html">Privacy</a>
+      <h4>Legal</h4>
+      <a href="terms.html">Terms of Service</a>
+      <a href="privacy.html">Privacy Policy</a>
     </div>
   </footer>
 
