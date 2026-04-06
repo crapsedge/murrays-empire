@@ -17,7 +17,7 @@
       --text-dim: #5A5A5A;
       --border: #E6E2DC;
       --accent: #1F3A5F;
-      --gold: #D4AF37; /* Premium Gold Accent */
+      --gold: #D4AF37;
     }
 
     html { scroll-behavior: smooth; }
@@ -33,8 +33,7 @@
 
     /* NAVIGATION */
     nav {
-      max-width: 1200px;
-      margin: 0 auto;
+      max-width: 100%;
       padding: 30px 5vw;
       display: flex;
       justify-content: flex-end;
@@ -44,6 +43,7 @@
       right: 0;
       left: 0;
       z-index: 10;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
     }
 
     nav a {
@@ -53,15 +53,19 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 1px;
+      transition: opacity 0.2s;
     }
 
-    /* HERO SECTION WITH YOUR IMAGE */
+    nav a:hover { opacity: 0.7; }
+
+    /* HERO SECTION - USING YOUR GITHUB IMAGE */
     .hero-section {
-      height: 80vh;
-      min-height: 500px;
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.7)), url('hero-bg.png');
+      height: 85vh;
+      min-height: 600px;
+      /* Using the exact filename from your GitHub screenshot */
+      background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('IMG_3963.png');
       background-size: cover;
-      background-position: center;
+      background-position: center 30%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -73,21 +77,21 @@
     }
 
     .corporate-title {
-      font-size: clamp(40px, 8vw, 110px);
+      font-size: clamp(40px, 8vw, 100px);
       font-weight: 900;
-      letter-spacing: -4px;
+      letter-spacing: -3px;
       line-height: 0.9;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       text-transform: uppercase;
+      text-shadow: 0 10px 30px rgba(0,0,0,0.5);
     }
 
-    .hero-quote {
-      font-size: 24px;
-      color: var(--gold);
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin-top: 10px;
+    .hero-tagline {
+      font-size: clamp(14px, 2vw, 18px);
+      letter-spacing: 4px;
       text-transform: uppercase;
+      font-weight: 400;
+      opacity: 0.9;
     }
 
     .main-container {
@@ -96,94 +100,83 @@
       padding: 0 5vw;
     }
 
-    .tagline {
-      font-size: clamp(18px, 2vw, 24px);
-      font-weight: 400;
-      color: var(--text-dim);
-      margin-bottom: 40px;
-    }
-
     .intro-block {
-      max-width: 750px;
-      margin-bottom: 60px;
+      max-width: 800px;
+      margin-bottom: 80px;
+      border-left: 4px solid var(--accent);
+      padding-left: 30px;
     }
 
     .intro-block p {
-      font-size: 20px;
+      font-size: 24px;
+      font-weight: 600;
       color: var(--text-main);
-      margin-bottom: 15px;
+      margin-bottom: 10px;
+      line-height: 1.3;
     }
 
     .intro-block span {
       font-size: 16px;
       color: var(--text-dim);
-      display: block;
     }
 
     .brand-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 40px;
-      margin-bottom: 100px;
+      gap: 30px;
+      margin-bottom: 120px;
     }
 
     .holding {
       background: var(--bg-secondary);
       border: 1px solid var(--border);
-      padding: 50px 40px;
+      padding: 60px 40px;
       text-decoration: none;
       color: var(--text-main);
-      cursor: pointer;
-      transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
-      border-radius: 4px;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border-radius: 2px;
     }
 
     .holding:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
       border-color: var(--accent);
-      background: #fcfcfc;
-      transform: translateY(-8px);
-      box-shadow: 0 15px 35px rgba(31, 58, 95, 0.05);
     }
 
     .holding h2 {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 800;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       color: var(--accent);
+      letter-spacing: -0.5px;
     }
 
     .holding p {
       font-size: 15px;
       color: var(--text-dim);
-      margin-bottom: 30px;
-      line-height: 1.6;
+      margin-bottom: 35px;
     }
 
     .cta-link {
       font-weight: 800;
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       color: var(--accent);
       border-bottom: 2px solid var(--border);
-      padding-bottom: 4px;
-      transition: border-color 0.2s;
-    }
-
-    .holding:hover .cta-link {
-      border-color: var(--accent);
+      padding-bottom: 5px;
     }
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 60px 0;
+      padding: 80px 0 40px 0;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 60px;
     }
 
     .footer-col h4 {
-      font-size: 11px;
+      font-size: 12px;
       text-transform: uppercase;
       letter-spacing: 2px;
       margin-bottom: 25px;
@@ -194,16 +187,13 @@
       font-size: 14px;
       color: var(--text-dim);
       text-decoration: none;
-      display: block;
       margin-bottom: 12px;
+      display: block;
     }
 
-    .footer-col a:hover { color: var(--accent); }
-
     @media (max-width: 768px) {
-      .hero-section { height: 60vh; }
-      .corporate-title { letter-spacing: -2px; }
-      .hero-quote { font-size: 16px; }
+      .hero-section { height: 70vh; }
+      .intro-block p { font-size: 20px; }
     }
   </style>
 </head>
@@ -217,57 +207,54 @@
 
   <header class="hero-section">
     <div class="corporate-title">MURRAYS EMPIRE</div>
-    <div class="hero-quote">Born into Struggle. Built into Legacy.</div>
+    <div class="hero-tagline">Legacy Built from Struggle</div>
   </header>
 
   <div class="main-container">
-    <p class="tagline">A group of online businesses built under one company.</p>
     
     <div class="intro-block">
-      <p>Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</p>
-      <span>We focus on simple tools, service networks, and educational platforms.</span>
+      <p>Murrays Empire LLC operates a specialized portfolio of digital brands spanning education, service logistics, and online tools.</p>
+      <span>Building scalable systems for the modern economy.</span>
     </div>
 
-    <section class="brand-grid" id="brands">
-      
+    <section class="brand-grid">
       <a href="https://brainhustle.store" class="holding" target="_blank">
         <h2>BrainHustle™</h2>
         <p>A digital platform providing tools for starting online businesses. We help users launch projects through clear step-by-step systems.</p>
-        <span class="cta-link">Open BrainHustle →</span>
+        <span class="cta-link">Explore Platform →</span>
       </a>
 
       <a href="https://omaharestoration.store" class="holding" target="_blank">
         <h2>Omaha Restoration™</h2>
         <p>A local referral network in Omaha, Nebraska. We connect homeowners with professional contractors for water damage cleanup.</p>
-        <span class="cta-link">View Omaha Restoration →</span>
+        <span class="cta-link">View Network →</span>
       </a>
 
       <a href="https://crapsedge.store" class="holding" target="_blank">
         <h2>CrapsEdge™</h2>
         <p>Educational content about casino strategy and mechanics. We provide guides and analysis on betting behavior and game systems.</p>
-        <span class="cta-link">Open CrapsEdge →</span>
+        <span class="cta-link">Visit CrapsEdge →</span>
       </a>
-
     </section>
 
     <footer>
       <div class="footer-col">
-        <h4>Online Business Portfolio</h4>
+        <h4>Corporate Office</h4>
         <p>Murrays Empire LLC</p>
         <p>Omaha, Nebraska</p>
-        <p style="margin-top:20px; font-style:italic;">Operating multiple online brands across education, services, and digital tools.</p>
+        <p style="margin-top:20px; font-style:italic; opacity: 0.7;">Established to house a diverse ecosystem of digital ventures.</p>
       </div>
 
       <div class="footer-col">
-        <h4>Direct Reach</h4>
+        <h4>Inquiries</h4>
         <a href="contact.html">Contact Department</a>
         <p>murraysempirellc@gmail.com</p>
       </div>
 
       <div class="footer-col">
-        <h4>Governance</h4>
-        <a href="terms.html">Terms</a>
-        <a href="privacy.html">Privacy</a>
+        <h4>Legal</h4>
+        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy Policy</a>
       </div>
     </footer>
   </div>
