@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+l<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -11,13 +11,12 @@
 
   <style>
     :root {
-      --bg-primary: #F8F6F2;
-      --bg-secondary: #FFFFFF;
-      --text-main: #111111;
-      --text-dim: #5A5A5A;
-      --border: #E6E2DC;
-      --accent: #1F3A5F;
-      --gold: #D4AF37;
+      --bg-primary: #F5F3EF;      /* soft warm white */
+      --bg-secondary: #FFFFFF;    /* pure white cards */
+      --text-main: #111111;       /* strong black */
+      --text-dim: #6A6A6A;        /* muted gray */
+      --border: #E4DED6;          /* soft divider */
+      --accent: #2F3E46;          /* deep slate (professional) */
     }
 
     html { scroll-behavior: smooth; }
@@ -58,11 +57,10 @@
 
     nav a:hover { opacity: 0.7; }
 
-    /* HERO SECTION - USING YOUR GITHUB IMAGE */
+    /* HERO SECTION */
     .hero-section {
       height: 85vh;
       min-height: 600px;
-      /* Using the exact filename from your GitHub screenshot */
       background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.6)), url('IMG_3963.png');
       background-size: cover;
       background-position: center 30%;
@@ -110,7 +108,7 @@
     .intro-block p {
       font-size: 24px;
       font-weight: 600;
-      color: var(--text-main);
+      color: var(--accent); /* Now using deep slate for the intro */
       margin-bottom: 10px;
       line-height: 1.3;
     }
@@ -139,7 +137,7 @@
 
     .holding:hover {
       transform: translateY(-10px);
-      box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+      box-shadow: 0 30px 60px rgba(47, 62, 70, 0.1);
       border-color: var(--accent);
     }
 
@@ -147,7 +145,7 @@
       font-size: 26px;
       font-weight: 800;
       margin-bottom: 20px;
-      color: var(--accent);
+      color: var(--accent); /* Updated to deep slate */
       letter-spacing: -0.5px;
     }
 
