@@ -39,36 +39,12 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* NAVIGATION */
-    nav {
-      max-width: 100%;
-      padding: 25px 5vw;
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 10;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, transparent 100%);
-    }
-
-    nav a {
-      text-decoration: none;
-      color: #FFFFFF;
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    /* HERO SECTION - FIXED POSITIONING */
+    /* HERO SECTION */
     .hero-section {
       width: 100%;
       height: 90vh; 
       background: #000 url('IMG_3963.png');
-      background-size: contain; /* Shows the WHOLE image without cropping */
+      background-size: contain;
       background-repeat: no-repeat;
       background-position: center top;
       margin-bottom: 40px;
@@ -87,7 +63,6 @@
       padding-left: 30px;
     }
 
-    /* RESTORED YOUR ORIGINAL WORDING STYLE */
     .intro-block p {
       font-size: 24px;
       font-weight: 600;
@@ -171,6 +146,11 @@
       display: block;
     }
 
+    .footer-col a:hover {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
     @media (max-width: 768px) {
       .hero-section { height: 70vh; background-size: cover; }
       .intro-block p { font-size: 20px; }
@@ -178,11 +158,6 @@
   </style>
 </head>
 <body>
-
-  <nav>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </nav>
 
   <header class="hero-section"></header>
 
@@ -222,12 +197,13 @@
 
       <div class="footer-col">
         <h4>Direct Reach</h4>
-        <a href="contact.html">Contact Department</a>
         <p>murraysempirellc@gmail.com</p>
       </div>
 
       <div class="footer-col">
         <h4>Governance</h4>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
         <a href="terms.html">Terms</a>
         <a href="privacy.html">Privacy</a>
       </div>
