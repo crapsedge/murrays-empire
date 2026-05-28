@@ -26,7 +26,6 @@
       --text-dim: #6A6A6A;
       --border: #E4DED6;
       --accent: #2F3E46;
-      --accent-soft: rgba(47, 62, 70, 0.08);
       --max-width: 1200px;
     }
 
@@ -52,11 +51,6 @@
       transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
     .skip-link {
       position: absolute;
       left: 16px;
@@ -68,12 +62,9 @@
       z-index: 999;
     }
 
-    .skip-link:focus {
-      top: 16px;
-    }
+    .skip-link:focus { top: 16px; }
 
-    a:focus-visible,
-    button:focus-visible {
+    a:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 3px;
     }
@@ -82,7 +73,7 @@
       position: sticky;
       top: 0;
       z-index: 20;
-      background: rgba(245, 243, 239, 0.92);
+      background: rgba(245, 243, 239, 0.94);
       backdrop-filter: blur(8px);
       border-bottom: 1px solid rgba(228, 222, 214, 0.8);
     }
@@ -90,7 +81,7 @@
     .header-inner {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 16px 5vw;
+      padding: 20px 5vw;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -98,9 +89,9 @@
     }
 
     .brand-name {
-      font-size: 14px;
-      font-weight: 800;
-      letter-spacing: 0.08em;
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
       text-transform: uppercase;
       color: var(--accent);
       white-space: nowrap;
@@ -113,7 +104,8 @@
     }
 
     .site-nav a {
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: 600;
       color: var(--text-dim);
     }
 
@@ -126,11 +118,10 @@
       width: 100%;
       min-height: 80vh;
       background:
-        linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.3)),
+        linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.5)),
         #000 url('IMG_3963.png') center top / cover no-repeat;
       display: flex;
       align-items: flex-end;
-      margin-bottom: 48px;
     }
 
     .hero-inner {
@@ -150,28 +141,7 @@
     .main-container {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 0 5vw 80px;
-    }
-
-    .intro-block {
-      max-width: 820px;
-      margin-bottom: 60px;
-      border-left: 4px solid var(--accent);
-      padding-left: 24px;
-    }
-
-    .intro-block h1 {
-      font-size: clamp(28px, 3vw, 44px);
-      line-height: 1.1;
-      font-weight: 800;
-      color: var(--text-main);
-      margin-bottom: 14px;
-    }
-
-    .intro-block p {
-      font-size: 16px;
-      color: var(--text-dim);
-      max-width: 65ch;
+      padding: 48px 5vw 80px;
     }
 
     .section-label {
@@ -272,6 +242,11 @@
       .header-inner {
         flex-direction: column;
         align-items: flex-start;
+        gap: 12px;
+      }
+
+      .brand-name {
+        font-size: 20px;
       }
 
       .site-nav {
@@ -303,7 +278,7 @@
 
   <header class="site-header">
     <div class="header-inner">
-      <a href="#" class="brand-name">Murrays Empire LLC</a>
+      <a href="index.html" class="brand-name">Murrays Empire LLC</a>
 
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#portfolio">Portfolio</a>
@@ -321,11 +296,6 @@
   </section>
 
   <main id="main" class="main-container">
-
-    <section class="intro-block" aria-labelledby="intro-title">
-      <h1 id="intro-title">Murrays Empire LLC owns and operates a group of online businesses focused on digital tools, services, and education.</h1>
-      <p>We focus on simple tools, service networks, and educational platforms built with clarity, usefulness, and direct execution in mind.</p>
-    </section>
 
     <section id="portfolio" aria-labelledby="portfolio-title">
       <div class="section-label" id="portfolio-title">Current portfolio</div>
