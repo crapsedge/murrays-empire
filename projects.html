@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y0RVT3YHKW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Y0RVT3YHKW');
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the portfolio and professional digital platforms operated by Murrays Empire LLC.">
+  <title>Projects | Murrays Empire LLC</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-primary: #F5F3EF;
+      --bg-secondary: #FFFFFF;
+      --text-main: #111111;
+      --text-dim: #6A6A6A;
+      --border: #E4DED6;
+      --accent: #2F3E46;
+      --max-width: 1200px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: var(--bg-primary);
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 16px;
+      top: -48px;
+      background: #fff;
+      color: #000;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      z-index: 999;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(245, 243, 239, 0.94);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(228, 222, 214, 0.8);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 20px 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand-name {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .site-nav {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .site-nav a {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text-dim);
+    }
+
+    .site-nav a.active,
+    .site-nav a:hover,
+    .site-nav a:focus-visible {
+      color: var(--accent);
+    }
+
+    .main-container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 60px 5vw 80px;
+    }
+
+    .page-title {
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .page-subtitle {
+      font-size: 18px;
+      color: var(--text-dim);
+      margin-bottom: 48px;
+      max-width: 600px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent);
+      margin-bottom: 18px;
+    }
+
+    .brand-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 24px;
+      margin-bottom: 90px;
+    }
+
+    .holding {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 36px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 260px;
+      transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+    }
+
+    .holding:hover,
+    .holding:focus-visible {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 36px rgba(0,0,0,0.06);
+      border-color: var(--accent);
+    }
+
+    .holding h2 {
+      font-size: 24px;
+      font-weight: 800;
+      margin-bottom: 14px;
+      color: var(--accent);
+    }
+
+    .holding p {
+      font-size: 15px;
+      color: var(--text-dim);
+      margin-bottom: 26px;
+      flex-grow: 1;
+    }
+
+    .cta-link {
+      display: inline-block;
+      font-weight: 800;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 4px;
+      align-self: flex-start;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 56px 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px;
+    }
+
+    .footer-col h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+
+    .footer-col p,
+    .footer-col a {
+      font-size: 14px;
+      color: var(--text-dim);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .footer-col a:hover,
+    .footer-col a:focus-visible {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+
+    .footer-note {
+      grid-column: 1 / -1;
+      padding-top: 12px;
+      font-size: 13px;
+      color: var(--text-dim);
+    }
+
+    @media (max-width: 768px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+
+      .brand-name {
+        font-size: 20px;
+      }
+
+      .site-nav {
+        gap: 14px 18px;
+      }
+
+      .page-title {
+        font-size: 32px;
+      }
+
+      .brand-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .holding {
+        padding: 28px 24px;
+        min-height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="brand-name">Murrays Empire LLC</a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="projects.html" class="active">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main-container">
+
+    <h1 class="page-title">Our Projects</h1>
+    <p class="page-subtitle">Discover the specialized digital ecosystems and platforms built, managed, and optimized under Murrays Empire LLC.</p>
+
+    <section aria-labelledby="portfolio-title">
+      <div class="section-label" id="portfolio-title">Active Portfolio</div>
+
+      <div class="brand-grid">
+        <a href="https://omaharestoration.store" class="holding" target="_blank" rel="noopener noreferrer">
+          <div>
+            <h2>Omaha Restoration™</h2>
+            <p>A high-performance automated referral and routing platform matching property owners in Omaha, Nebraska with reliable, independent restoration contractors.</p>
+          </div>
+          <span class="cta-link">Visit Platform →</span>
+        </a>
+
+        <a href="#" class="holding">
+          <div>
+            <h2>BrainHustle™</h2>
+            <p>A digital platform specializing in scalable business concepts, income systems, and actionable wealth-building toolkits designed for the modern economy.</p>
+          </div>
+          <span class="cta-link">Coming Soon →</span>
+        </a>
+
+        <a href="#" class="holding">
+          <div>
+            <h2>CrapsEdge™</h2>
+            <p>An educational platform delivering expert strategies, digital guides, and casino mechanics training focused on gaming awareness and risk discipline.</p>
+          </div>
+          <span class="cta-link">Coming Soon →</span>
+        </a>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <p>Murrays Empire LLC</p>
+        <p>Omaha, Nebraska</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Direct Reach</h3>
+        <a href="mailto:murraysempirellc@gmail.com">murraysempirellc@gmail.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h3>Governance</h3>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="terms.html">Terms</a>
+        <a href="privacy.html">Privacy</a>
+      </div>
+
+      <div class="footer-note">
+        © 2026 Murrays Empire LLC. All rights reserved.
+      </div>
+    </footer>
+
+  </main>
+</body>
+</html>
