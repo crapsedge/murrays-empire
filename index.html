@@ -249,8 +249,7 @@
 
     #main,
     #portfolio,
-    #about,
-    #model {
+    #about {
 
       scroll-margin-top:
         var(--anchor-offset);
@@ -803,9 +802,6 @@
       padding-top:
         24px;
 
-      margin-bottom:
-        110px;
-
     }
 
 
@@ -856,106 +852,6 @@
     .about-body p:last-child {
 
       margin-bottom: 0;
-
-    }
-
-
-
-    /* =========================
-       OPERATING MODEL
-    ========================= */
-
-
-    .model-grid {
-
-      display: grid;
-
-      grid-template-columns:
-        repeat(
-          3,
-          minmax(
-            0,
-            1fr
-          )
-        );
-
-      border:
-        1px solid
-        var(--border-color);
-
-      background:
-        var(--bg-panel);
-
-    }
-
-
-    .model-column {
-
-      min-width: 0;
-
-      padding:
-        48px 36px;
-
-      border-right:
-        1px solid
-        var(--border-color);
-
-    }
-
-
-    .model-column:last-child {
-
-      border-right: 0;
-
-    }
-
-
-    .model-num {
-
-      display: block;
-
-      margin-bottom:
-        24px;
-
-      color:
-        var(--text-muted);
-
-      font-size: 12px;
-
-      font-weight: 700;
-
-      letter-spacing:
-        0.15em;
-
-    }
-
-
-    .model-column h3 {
-
-      margin-bottom:
-        16px;
-
-      font-size: 15px;
-
-      font-weight: 700;
-
-      letter-spacing:
-        0.08em;
-
-      text-transform:
-        uppercase;
-
-    }
-
-
-    .model-column p {
-
-      color:
-        var(--text-muted);
-
-      font-size: 14px;
-
-      line-height: 1.65;
 
     }
 
@@ -1186,8 +1082,7 @@
 
 
       .portfolio-grid,
-      .about-spread,
-      .model-grid {
+      .about-spread {
 
         grid-template-columns:
           minmax(
@@ -1201,24 +1096,6 @@
       .about-spread {
 
         gap: 36px;
-
-      }
-
-
-      .model-column {
-
-        border-right: 0;
-
-        border-bottom:
-          1px solid
-          var(--border-color);
-
-      }
-
-
-      .model-column:last-child {
-
-        border-bottom: 0;
 
       }
 
@@ -1382,9 +1259,6 @@
 
         gap: 28px;
 
-        margin-bottom:
-          72px;
-
       }
 
 
@@ -1396,14 +1270,6 @@
             9vw,
             48px
           );
-
-      }
-
-
-      .model-column {
-
-        padding:
-          32px 24px;
 
       }
 
@@ -1523,10 +1389,6 @@
 
         <a href="#about">
           Company
-        </a>
-
-        <a href="#model">
-          Operating Model
         </a>
 
         <a href="Contact.html">
@@ -1775,99 +1637,6 @@
       </section>
 
 
-
-      <!-- OPERATING MODEL -->
-
-      <section
-        id="model"
-        aria-labelledby="model-title"
-      >
-
-        <div class="section-header">
-
-          <h2
-            id="model-title"
-            class="section-title"
-          >
-            Our Operating Model
-          </h2>
-
-
-          <span class="section-meta">
-            Development / Operations / Growth
-          </span>
-
-        </div>
-
-
-
-        <div class="model-grid">
-
-
-          <div class="model-column">
-
-            <span class="model-num">
-              01 / DEVELOPMENT
-            </span>
-
-
-            <h3>
-              Brand Development
-            </h3>
-
-
-            <p>
-              Creating focused service brands around identifiable customer needs and market opportunities.
-            </p>
-
-          </div>
-
-
-
-          <div class="model-column">
-
-            <span class="model-num">
-              02 / OPERATIONS
-            </span>
-
-
-            <h3>
-              Digital Operations
-            </h3>
-
-
-            <p>
-              Developing websites, marketing systems, and referral workflows supporting each operating brand.
-            </p>
-
-          </div>
-
-
-
-          <div class="model-column">
-
-            <span class="model-num">
-              03 / GROWTH
-            </span>
-
-
-            <h3>
-              Portfolio Development
-            </h3>
-
-
-            <p>
-              Expanding existing brands and evaluating complementary service opportunities.
-            </p>
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-
     </div>
 
   </main>
@@ -1958,11 +1727,6 @@
 
           <a href="#about">
             Company
-          </a>
-
-
-          <a href="#model">
-            Operating Model
           </a>
 
 
